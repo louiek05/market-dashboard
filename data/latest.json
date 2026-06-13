@@ -1,14 +1,39 @@
 {
-  "updated_at": "2026-06-13T00:00:00",
+  "updated_at": "2026-06-13T05:08:24.210712",
   "institutional": null,
-  "institutional_error": "尚未執行過資料抓取，請先手動執行一次 GitHub Action",
+  "institutional_error": "Expecting value: line 1 column 1 (char 0)",
   "taifex": null,
   "taifex_raw_sample": null,
-  "taifex_error": "尚未執行過資料抓取",
+  "taifex_error": "Expecting value: line 1 column 1 (char 0)",
   "top10": null,
-  "top10_error": "尚未執行過資料抓取",
-  "vix": null,
-  "vix_error": "尚未執行過資料抓取",
-  "us_indices": null,
-  "us_indices_error": "尚未執行過資料抓取"
+  "top10_error": "Expecting value: line 1 column 1 (char 0)",
+  "vix": {
+    "close": 17.68,
+    "change": -1.76,
+    "change_pct": -9.05
+  },
+  "vix_error": null,
+  "us_indices": [
+    {
+      "label": "那斯達克",
+      "close": 25888.84,
+      "change_pct": 0.31
+    },
+    {
+      "label": "費半指數",
+      "close": 13371.47,
+      "change_pct": 1.52
+    },
+    {
+      "label": "S&P 500",
+      "close": 7431.46,
+      "change_pct": 0.5
+    },
+    {
+      "label": "道瓊",
+      "close": 51202.26,
+      "change_pct": 0.7
+    }
+  ],
+  "us_indices_error": null
 }
