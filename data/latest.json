@@ -1,12 +1,124 @@
 {
-  "updated_at": "2026-06-13T05:08:24.210712",
-  "institutional": null,
-  "institutional_error": "Expecting value: line 1 column 1 (char 0)",
-  "taifex": null,
+  "updated_at": "2026-06-13T05:14:14.547656",
+  "institutional": [
+    {
+      "date": "20260612",
+      "foreign_lots": 1038179,
+      "trust_lots": 18278,
+      "dealer_lots": 194548
+    },
+    {
+      "date": "20260611",
+      "foreign_lots": -249940,
+      "trust_lots": 71225,
+      "dealer_lots": -778211
+    },
+    {
+      "date": "20260610",
+      "foreign_lots": -527271,
+      "trust_lots": 108041,
+      "dealer_lots": -1051976
+    },
+    {
+      "date": "20260609",
+      "foreign_lots": -109784,
+      "trust_lots": 91016,
+      "dealer_lots": -285919
+    },
+    {
+      "date": "20260608",
+      "foreign_lots": -631543,
+      "trust_lots": 104566,
+      "dealer_lots": -949364
+    },
+    {
+      "date": "20260605",
+      "foreign_lots": -646179,
+      "trust_lots": 59390,
+      "dealer_lots": -468028
+    },
+    {
+      "date": "20260604",
+      "foreign_lots": -629268,
+      "trust_lots": 269936,
+      "dealer_lots": -566363
+    },
+    {
+      "date": "20260603",
+      "foreign_lots": 643231,
+      "trust_lots": 143041,
+      "dealer_lots": 122624
+    },
+    {
+      "date": "20260602",
+      "foreign_lots": -321603,
+      "trust_lots": 388899,
+      "dealer_lots": -273414
+    },
+    {
+      "date": "20260601",
+      "foreign_lots": 443258,
+      "trust_lots": 123423,
+      "dealer_lots": -108435
+    }
+  ],
+  "institutional_error": null,
+  "taifex": [],
   "taifex_raw_sample": null,
-  "taifex_error": "Expecting value: line 1 column 1 (char 0)",
-  "top10": null,
-  "top10_error": "Expecting value: line 1 column 1 (char 0)",
+  "taifex_error": null,
+  "top10": [
+    {
+      "code": "00403A",
+      "name": "主動統一升級50  ",
+      "net_lots": 140223
+    },
+    {
+      "code": "2887  ",
+      "name": "台新新光金      ",
+      "net_lots": 85214
+    },
+    {
+      "code": "00981A",
+      "name": "主動統一台股增長",
+      "net_lots": 80638
+    },
+    {
+      "code": "2610  ",
+      "name": "華航            ",
+      "net_lots": 41603
+    },
+    {
+      "code": "2891  ",
+      "name": "中信金          ",
+      "net_lots": 40901
+    },
+    {
+      "code": "2618  ",
+      "name": "長榮航          ",
+      "net_lots": 37749
+    },
+    {
+      "code": "2344  ",
+      "name": "華邦電          ",
+      "net_lots": 33574
+    },
+    {
+      "code": "3576  ",
+      "name": "聯合再生        ",
+      "net_lots": 30963
+    },
+    {
+      "code": "2890  ",
+      "name": "永豐金          ",
+      "net_lots": 30858
+    },
+    {
+      "code": "2834  ",
+      "name": "臺企銀          ",
+      "net_lots": 29746
+    }
+  ],
+  "top10_error": null,
   "vix": {
     "close": 17.68,
     "change": -1.76,
