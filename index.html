@@ -125,6 +125,11 @@
 </div>
 
 <div class="card">
+  <h2>個股賣超前十大</h2>
+  <div id="top10sell">載入中...</div>
+</div>
+
+<div class="card">
   <h2>VIX / 波動率</h2>
   <div id="vix">載入中...</div>
 </div>
@@ -182,7 +187,8 @@ async function load(){
     } else {
       let html = `<div class="err">資料抓取失敗或欄位需調整: ${data.taifex_error || '查無台股期貨資料'}</div>`;
       if(data.taifex_raw_sample){
-        html += '<div class="footnote">原始資料樣本(供除錯):</div><pre>' + JSON.stringify(data.taifex_raw_sample, null, 1) + '</pre>';
+        const sample = typeof data.taifex_raw_sample === 'string' ? data.taifex_raw_sample : JSON.stringify(data.taifex_raw_sample, null, 1);
+        html += '<div class="footnote">原始資料樣本(供除錯):</div><pre>' + sample + '</pre>';
       }
       tx.innerHTML = html;
     }
@@ -198,6 +204,19 @@ async function load(){
       top10.innerHTML = html;
     } else {
       top10.innerHTML = `<div class="err">資料抓取失敗: ${data.top10_error || '未知錯誤'}</div>`;
+    }
+
+    // 3b. 個股賣超前十大
+    const top10sell = document.getElementById('top10sell');
+    if(data.top10_sell){
+      let html = '<table><tr><th>股票</th><th>買賣超(張)</th></tr>';
+      data.top10_sell.forEach(r=>{
+        html += `<tr><td>${r.code} ${r.name}</td><td>${fmtSigned(r.net_lots)}</td></tr>`;
+      });
+      html += '</table><div class="footnote">單位:張</div>';
+      top10sell.innerHTML = html;
+    } else {
+      top10sell.innerHTML = `<div class="err">資料抓取失敗: ${data.top10_error || '未知錯誤'}</div>`;
     }
 
     // 4. VIX
