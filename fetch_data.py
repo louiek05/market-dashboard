@@ -41,70 +41,51 @@ result = {
     "us_indices_error": None,
 }
 
-# 1. 三大法人買賣超 (近10日, 全市場加總)
+# 1. 三大法人買賣金額統計 (近10日, 單位:億元)
 try:
-    try:
-        data = fetch_json("https://openapi.twse.com.tw/v1/fund/T86")
-    except Exception:
-        # Fallback: 用 www.twse.com.tw 逐日查詢最近10個交易日
-        data = []
-        today = datetime.date.today()
-        days_checked = 0
-        d = today
-        while len(set(r["日期"] for r in data)) < 10 and days_checked < 20:
-            date_str = d.strftime("%Y%m%d")
-            try:
-                day_data = fetch_json(f"https://www.twse.com.tw/rwd/zh/fund/T86?date={date_str}&selectType=ALLBUT0999&response=json")
-                if day_data.get("stat") == "OK" and day_data.get("data"):
-                    fields = day_data["fields"]
-                    for row in day_data["data"]:
-                        rowdict = dict(zip(fields, row))
-                        rowdict["日期"] = date_str
-
-                        def num(key_options, rd=rowdict):
-                            for k in key_options:
-                                if k in rd:
-                                    v = str(rd[k]).replace(",", "").strip()
-                                    return float(v) if v else 0
-                            return 0
-
-                        rowdict["外陸資買賣超股數(不含外資自營商)"] = num(["外陸資買賣超股數(不含外資自營商)", "外資及陸資(不含外資自營商)-買賣超股數"])
-                        rowdict["外資自營商買賣超股數"] = num(["外資自營商買賣超股數", "外資自營商-買賣超股數"])
-                        rowdict["投信買賣超股數"] = num(["投信買賣超股數", "投信-買賣超股數"])
-                        rowdict["自營商買賣超股數(自行買賣)"] = num(["自營商買賣超股數(自行買賣)", "自營商(自行買賣)-買賣超股數"])
-                        rowdict["自營商買賣超股數(避險)"] = num(["自營商買賣超股數(避險)", "自營商(避險)-買賣超股數"])
-                        data.append(rowdict)
-            except Exception:
-                pass
-            d -= datetime.timedelta(days=1)
-            days_checked += 1
-
     by_date = {}
-    for row in data:
-        d = row.get("日期")
-        if not d:
-            continue
-        if d not in by_date:
-            by_date[d] = {"foreign": 0, "trust": 0, "dealer": 0}
-        # 外資及陸資 + 外資自營商
-        foreign = float(row.get("外陸資買賣超股數(不含外資自營商)", 0) or 0) + \
-                  float(row.get("外資自營商買賣超股數", 0) or 0)
-        trust = float(row.get("投信買賣超股數", 0) or 0)
-        dealer = float(row.get("自營商買賣超股數(自行買賣)", 0) or 0) + \
-                 float(row.get("自營商買賣超股數(避險)", 0) or 0)
-        by_date[d]["foreign"] += foreign
-        by_date[d]["trust"] += trust
-        by_date[d]["dealer"] += dealer
+    today = datetime.date.today()
+    days_checked = 0
+    d = today
+    while len(by_date) < 10 and days_checked < 20:
+        date_str = d.strftime("%Y%m%d")
+        try:
+            day_data = fetch_json(f"https://www.twse.com.tw/rwd/zh/fund/BFI82U?dayDate={date_str}&type=day&response=json")
+            if day_data.get("stat") == "OK" and day_data.get("data"):
+                fields = day_data["fields"]
+                entry = {"foreign": 0, "trust": 0, "dealer": 0}
+                for row in day_data["data"]:
+                    rd = dict(zip(fields, row))
+                    name = rd.get("單位名稱", "")
+                    net_str = str(rd.get("買賣差額", "0")).replace(",", "").strip()
+                    try:
+                        net = float(net_str) if net_str else 0
+                    except ValueError:
+                        net = 0
+                    # 億元 = 元 / 1e8
+                    net_yi = net / 1e8
+                    if "自營商" in name and "合計" not in name:
+                        entry["dealer"] += net_yi
+                    elif "投信" in name:
+                        entry["trust"] += net_yi
+                    elif "外資" in name or "陸資" in name:
+                        entry["foreign"] += net_yi
+                if any(entry.values()):
+                    by_date[date_str] = entry
+        except Exception:
+            pass
+        d -= datetime.timedelta(days=1)
+        days_checked += 1
 
     dates = sorted(by_date.keys(), reverse=True)[:10]
     result["institutional"] = [
         {
-            "date": d,
-            "foreign_lots": round(by_date[d]["foreign"] / 1000),
-            "trust_lots": round(by_date[d]["trust"] / 1000),
-            "dealer_lots": round(by_date[d]["dealer"] / 1000),
+            "date": dt,
+            "foreign_amt": round(by_date[dt]["foreign"], 1),
+            "trust_amt": round(by_date[dt]["trust"], 1),
+            "dealer_amt": round(by_date[dt]["dealer"], 1),
         }
-        for d in dates
+        for dt in dates
     ]
 except Exception as e:
     result["institutional_error"] = str(e)
@@ -117,6 +98,10 @@ try:
         "https://www.wantgoo.com/futures/institutional-investors/net-open-interest",
         headers={
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8',
+            'Referer': 'https://www.wantgoo.com/futures',
+            'Cache-Control': 'no-cache',
         }
     )
     with urllib.request.urlopen(req, timeout=20, context=_CTX) as res:

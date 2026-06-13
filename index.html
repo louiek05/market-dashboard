@@ -142,7 +142,9 @@
 <script>
 const fmt = n => {
   if (n === null || n === undefined || isNaN(n)) return '-';
-  return Number(n).toLocaleString('zh-TW', {maximumFractionDigits: 0});
+  const num = Number(n);
+  const decimals = Number.isInteger(num) ? 0 : 1;
+  return num.toLocaleString('zh-TW', {minimumFractionDigits: decimals, maximumFractionDigits: decimals});
 };
 const fmtSigned = n => {
   if (n === null || n === undefined || isNaN(n)) return '-';
@@ -160,14 +162,14 @@ async function load(){
     document.getElementById('asof').textContent =
       '資料時間: ' + new Date(data.updated_at).toLocaleString('zh-TW');
 
-    // 1. 三大法人買賣超
+    // 1. 三大法人買賣金額
     const inst = document.getElementById('institutional');
     if(data.institutional){
-      let html = '<table><tr><th>日期</th><th>外資(張)</th><th>投信(張)</th><th>自營商(張)</th></tr>';
+      let html = '<table><tr><th>日期</th><th>外資(億)</th><th>投信(億)</th><th>自營商(億)</th></tr>';
       data.institutional.forEach(r=>{
-        html += `<tr><td>${r.date}</td><td>${fmtSigned(r.foreign_lots)}</td><td>${fmtSigned(r.trust_lots)}</td><td>${fmtSigned(r.dealer_lots)}</td></tr>`;
+        html += `<tr><td>${r.date}</td><td>${fmtSigned(r.foreign_amt)}</td><td>${fmtSigned(r.trust_amt)}</td><td>${fmtSigned(r.dealer_amt)}</td></tr>`;
       });
-      html += '</table><div class="footnote">單位:張，正值=買超，負值=賣超</div>';
+      html += '</table><div class="footnote">單位:億元，正值=買超，負值=賣超</div>';
       inst.innerHTML = html;
     } else {
       inst.innerHTML = `<div class="err">資料抓取失敗: ${data.institutional_error || '未知錯誤'}</div>`;
