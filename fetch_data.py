@@ -7,10 +7,22 @@ import json
 import urllib.request
 import datetime
 
-def fetch_json(url, timeout=15):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    with urllib.request.urlopen(req, timeout=timeout) as res:
-        return json.loads(res.read().decode('utf-8'))
+import ssl
+
+_CTX = ssl.create_default_context()
+_CTX.check_hostname = False
+_CTX.verify_mode = ssl.CERT_NONE
+
+def fetch_json(url, timeout=20):
+    req = urllib.request.Request(url, headers={
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+        'Accept': 'application/json, text/plain, */*',
+    })
+    with urllib.request.urlopen(req, timeout=timeout, context=_CTX) as res:
+        raw = res.read().decode('utf-8')
+        if not raw.strip():
+            raise ValueError(f"Empty response body from {url}")
+        return json.loads(raw)
 
 result = {
     "updated_at": datetime.datetime.now().isoformat(),
@@ -29,7 +41,42 @@ result = {
 
 # 1. 三大法人買賣超 (近10日, 全市場加總)
 try:
-    data = fetch_json("https://openapi.twse.com.tw/v1/fund/T86")
+    try:
+        data = fetch_json("https://openapi.twse.com.tw/v1/fund/T86")
+    except Exception:
+        # Fallback: 用 www.twse.com.tw 逐日查詢最近10個交易日
+        data = []
+        today = datetime.date.today()
+        days_checked = 0
+        d = today
+        while len(set(r["日期"] for r in data)) < 10 and days_checked < 20:
+            date_str = d.strftime("%Y%m%d")
+            try:
+                day_data = fetch_json(f"https://www.twse.com.tw/rwd/zh/fund/T86?date={date_str}&selectType=ALLBUT0999&response=json")
+                if day_data.get("stat") == "OK" and day_data.get("data"):
+                    fields = day_data["fields"]
+                    for row in day_data["data"]:
+                        rowdict = dict(zip(fields, row))
+                        rowdict["日期"] = date_str
+
+                        def num(key_options, rd=rowdict):
+                            for k in key_options:
+                                if k in rd:
+                                    v = str(rd[k]).replace(",", "").strip()
+                                    return float(v) if v else 0
+                            return 0
+
+                        rowdict["外陸資買賣超股數(不含外資自營商)"] = num(["外陸資買賣超股數(不含外資自營商)", "外資及陸資(不含外資自營商)-買賣超股數"])
+                        rowdict["外資自營商買賣超股數"] = num(["外資自營商買賣超股數", "外資自營商-買賣超股數"])
+                        rowdict["投信買賣超股數"] = num(["投信買賣超股數", "投信-買賣超股數"])
+                        rowdict["自營商買賣超股數(自行買賣)"] = num(["自營商買賣超股數(自行買賣)", "自營商(自行買賣)-買賣超股數"])
+                        rowdict["自營商買賣超股數(避險)"] = num(["自營商買賣超股數(避險)", "自營商(避險)-買賣超股數"])
+                        data.append(rowdict)
+            except Exception:
+                pass
+            d -= datetime.timedelta(days=1)
+            days_checked += 1
+
     by_date = {}
     for row in data:
         d = row.get("日期")
@@ -62,7 +109,10 @@ except Exception as e:
 
 # 2. 台指期未平倉量 (三大法人)
 try:
-    data = fetch_json("https://openapi.taifex.com.tw/v1/OpenInterestOfTaifexFuturesAndOptionsFinancialIndicators")
+    try:
+        data = fetch_json("https://openapi.taifex.com.tw/v1/OpenInterestOfTaifexFuturesAndOptionsFinancialIndicators")
+    except Exception:
+        data = []  # 無可用備援來源，留空讓主要欄位顯示除錯資訊
     # 存一筆原始樣本方便除錯（之後可移除）
     if isinstance(data, list) and data:
         result["taifex_raw_sample"] = data[0]
@@ -88,7 +138,33 @@ except Exception as e:
 
 # 3. 個股買賣超前十大
 try:
-    data = fetch_json("https://openapi.twse.com.tw/v1/fund/TWT38U")
+    try:
+        data = fetch_json("https://openapi.twse.com.tw/v1/fund/TWT38U")
+    except Exception:
+        data = None
+        today = datetime.date.today()
+        d = today
+        for _ in range(10):
+            date_str = d.strftime("%Y%m%d")
+            try:
+                day_data = fetch_json(f"https://www.twse.com.tw/rwd/zh/fund/TWT38U?date={date_str}&response=json")
+                if day_data.get("stat") == "OK" and day_data.get("data"):
+                    fields = day_data["fields"]
+                    data = []
+                    for row in day_data["data"]:
+                        rowdict = dict(zip(fields, row))
+                        data.append({
+                            "證券代號": rowdict.get("證券代號", rowdict.get("股票代號", "")),
+                            "證券名稱": rowdict.get("證券名稱", rowdict.get("股票名稱", "")),
+                            "買賣超股數": str(rowdict.get("買賣超股數", "0")).replace(",", ""),
+                        })
+                    break
+            except Exception:
+                pass
+            d -= datetime.timedelta(days=1)
+        if data is None:
+            raise ValueError("無法取得買賣超前十大資料")
+
     top10 = []
     for row in data[:10]:
         code = row.get("證券代號") or row.get("股票代號") or ""
