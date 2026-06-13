@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T05:28:30.647172",
+  "updated_at": "2026-06-13T05:35:18.151843",
   "institutional": [
     {
       "date": "20260612",
@@ -64,8 +64,8 @@
   ],
   "institutional_error": null,
   "taifex": null,
-  "taifex_raw_sample": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\r\n\r\n\r\n<head><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"></head>\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"zh-Hant-TW\" >\r\n\t\t<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\r\n   \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n    <head>\r\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n    </head>\r\n    <body>\r\n   \t\t<script>\r\n\t\t\talert(\"查無資料\");\r\n\t\t    \t\twindow.location.replace(\"futContractsDateView\");\r\n\t\t    \t\t\r\n\t\t    \t</script>\r\n    <script defer src=\"https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447\" integrity=\"sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==\" data-cf-beacon='{\"version\":\"2024.11.0\",\"token\":\"269d4d87c8e342719cc80046672eb4ce\",\"server_timing\":{\"name\":{\"cfCacheStatus\":true,\"cfEdge\":true,\"cfExtPri\":true,\"cfL4\":true,\"cfOrigin\":true,\"cf",
-  "taifex_error": "查無台股期貨資料",
+  "taifex_raw_sample": null,
+  "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
       "code": "00403A",
