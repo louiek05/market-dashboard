@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>盤後籌碼儀表板</title>
+<style>
+  :root{
+    --bg:#0b0e14;
+    --panel:#141923;
+    --line:#262d3a;
+    --text:#e6e9f0;
+    --muted:#8b94a7;
+    --red:#ff5c5c;
+    --green:#3ddc97;
+    --accent:#ffb547;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:-apple-system,"Noto Sans TC",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    padding:16px;
+    max-width:680px;
+    margin:0 auto;
+  }
+  h1{
+    font-size:1.3rem;
+    margin:0 0 4px;
+    letter-spacing:0.05em;
+  }
+  .sub{
+    color:var(--muted);
+    font-size:0.8rem;
+    margin-bottom:16px;
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:14px;
+  }
+  .card h2{
+    font-size:0.95rem;
+    margin:0 0 10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:var(--accent);
+  }
+  .card h2 .num{
+    font-size:0.7rem;
+    background:var(--line);
+    color:var(--muted);
+    border-radius:4px;
+    padding:1px 6px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.82rem;
+  }
+  th,td{
+    padding:5px 6px;
+    text-align:right;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  th{
+    color:var(--muted);
+    font-weight:500;
+    font-size:0.75rem;
+  }
+  td:first-child, th:first-child{text-align:left;}
+  .pos{color:var(--green);}
+  .neg{color:var(--red);}
+  .err{color:var(--red); font-size:0.75rem;}
+  .grid2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .stat{
+    background:#0f1420;
+    border-radius:8px;
+    padding:10px;
+    text-align:center;
+  }
+  .stat .label{font-size:0.7rem;color:var(--muted);margin-bottom:4px;}
+  .stat .val{font-size:1.1rem;font-weight:600;}
+  .footnote{font-size:0.7rem;color:var(--muted);margin-top:6px;}
+  pre{
+    font-size:0.7rem;
+    color:var(--muted);
+    white-space:pre-wrap;
+    word-break:break-all;
+    background:#0f1420;
+    padding:8px;
+    border-radius:6px;
+    max-height:200px;
+    overflow:auto;
+  }
+</style>
+</head>
+<body>
+
+<h1>📊 盤後籌碼儀表板</h1>
+<div class="sub" id="asof">資料載入中...</div>
+
+<div class="card">
+  <h2>三大法人買賣超 <span class="num">近10日</span></h2>
+  <div id="institutional">載入中...</div>
+</div>
+
+<div class="card">
+  <h2>台指期未平倉量 <span class="num">三大法人</span></h2>
+  <div id="taifex">載入中...</div>
+</div>
+
+<div class="card">
+  <h2>個股買賣超前十大</h2>
+  <div id="top10">載入中...</div>
+</div>
+
+<div class="card">
+  <h2>VIX / 波動率</h2>
+  <div id="vix">載入中...</div>
+</div>
+
+<div class="card">
+  <h2>美股收盤</h2>
+  <div id="us">載入中...</div>
+</div>
+
+<script>
+const fmt = n => {
+  if (n === null || n === undefined || isNaN(n)) return '-';
+  return Number(n).toLocaleString('zh-TW', {maximumFractionDigits: 0});
+};
+const fmtSigned = n => {
+  if (n === null || n === undefined || isNaN(n)) return '-';
+  const num = Number(n);
+  const cls = num > 0 ? 'pos' : (num < 0 ? 'neg' : '');
+  const sign = num > 0 ? '+' : '';
+  return `<span class="${cls}">${sign}${fmt(num)}</span>`;
+};
+
+async function load(){
+  try{
+    const res = await fetch('data/latest.json?_=' + Date.now());
+    const data = await res.json();
+
+    document.getElementById('asof').textContent =
+      '資料時間: ' + new Date(data.updated_at).toLocaleString('zh-TW');
+
+    // 1. 三大法人買賣超
+    const inst = document.getElementById('institutional');
+    if(data.institutional){
+      let html = '<table><tr><th>日期</th><th>外資(張)</th><th>投信(張)</th><th>自營商(張)</th></tr>';
+      data.institutional.forEach(r=>{
+        html += `<tr><td>${r.date}</td><td>${fmtSigned(r.foreign_lots)}</td><td>${fmtSigned(r.trust_lots)}</td><td>${fmtSigned(r.dealer_lots)}</td></tr>`;
+      });
+      html += '</table><div class="footnote">單位:張，正值=買超，負值=賣超</div>';
+      inst.innerHTML = html;
+    } else {
+      inst.innerHTML = `<div class="err">資料抓取失敗: ${data.institutional_error || '未知錯誤'}</div>`;
+    }
+
+    // 2. 台指期未平倉量
+    const tx = document.getElementById('taifex');
+    if(data.taifex && data.taifex.length){
+      let html = '<table><tr><th>身份</th><th>多方OI</th><th>空方OI</th><th>淨額</th></tr>';
+      data.taifex.forEach(r=>{
+        const long = Number(r.long_oi)||0;
+        const short = Number(r.short_oi)||0;
+        html += `<tr><td>${r.identity||'-'}</td><td>${fmt(long)}</td><td>${fmt(short)}</td><td>${fmtSigned(long-short)}</td></tr>`;
+      });
+      html += '</table><div class="footnote">單位:口</div>';
+      tx.innerHTML = html;
+    } else {
+      let html = `<div class="err">資料抓取失敗或欄位需調整: ${data.taifex_error || '查無台股期貨資料'}</div>`;
+      if(data.taifex_raw_sample){
+        html += '<div class="footnote">原始資料樣本(供除錯):</div><pre>' + JSON.stringify(data.taifex_raw_sample, null, 1) + '</pre>';
+      }
+      tx.innerHTML = html;
+    }
+
+    // 3. 個股買賣超前十大
+    const top10 = document.getElementById('top10');
+    if(data.top10){
+      let html = '<table><tr><th>股票</th><th>買賣超(張)</th></tr>';
+      data.top10.forEach(r=>{
+        html += `<tr><td>${r.code} ${r.name}</td><td>${fmtSigned(r.net_lots)}</td></tr>`;
+      });
+      html += '</table><div class="footnote">單位:張</div>';
+      top10.innerHTML = html;
+    } else {
+      top10.innerHTML = `<div class="err">資料抓取失敗: ${data.top10_error || '未知錯誤'}</div>`;
+    }
+
+    // 4. VIX
+    const vix = document.getElementById('vix');
+    if(data.vix){
+      vix.innerHTML = `<div class="grid2">
+        <div class="stat"><div class="label">VIX 收盤</div><div class="val">${data.vix.close}</div></div>
+        <div class="stat"><div class="label">漲跌</div><div class="val">${fmtSigned(data.vix.change)} (${data.vix.change_pct>=0?'+':''}${data.vix.change_pct}%)</div></div>
+      </div>`;
+    } else {
+      vix.innerHTML = `<div class="err">資料抓取失敗: ${data.vix_error || '未知錯誤'}</div>`;
+    }
+
+    // 5. 美股收盤
+    const us = document.getElementById('us');
+    if(data.us_indices){
+      let html = '<table><tr><th>指數</th><th>收盤</th><th>漲跌幅</th></tr>';
+      data.us_indices.forEach(r=>{
+        if(r.error){
+          html += `<tr><td>${r.label}</td><td colspan="2" class="err">失敗</td></tr>`;
+        } else {
+          html += `<tr><td>${r.label}</td><td>${fmt(r.close)}</td><td>${fmtSigned(r.change_pct)}%</td></tr>`;
+        }
+      });
+      html += '</table>';
+      us.innerHTML = html;
+    } else {
+      us.innerHTML = `<div class="err">資料抓取失敗: ${data.us_indices_error || '未知錯誤'}</div>`;
+    }
+
+  }catch(e){
+    document.getElementById('asof').textContent = '載入 data/latest.json 失敗: ' + e.message;
+  }
+}
+
+load();
+</script>
+</body>
+</html>

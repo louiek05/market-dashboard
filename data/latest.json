@@ -1,0 +1,14 @@
+{
+  "updated_at": "2026-06-13T00:00:00",
+  "institutional": null,
+  "institutional_error": "尚未執行過資料抓取，請先手動執行一次 GitHub Action",
+  "taifex": null,
+  "taifex_raw_sample": null,
+  "taifex_error": "尚未執行過資料抓取",
+  "top10": null,
+  "top10_error": "尚未執行過資料抓取",
+  "vix": null,
+  "vix_error": "尚未執行過資料抓取",
+  "us_indices": null,
+  "us_indices_error": "尚未執行過資料抓取"
+}
