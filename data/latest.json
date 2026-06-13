@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T05:23:38.501604",
+  "updated_at": "2026-06-13T05:28:30.647172",
   "institutional": [
     {
       "date": "20260612",
@@ -171,6 +171,7 @@
       "net_lots": -13824
     }
   ],
+  "top10_sell_error": null,
   "vix": {
     "close": 17.68,
     "change": -1.76,
