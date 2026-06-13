@@ -1,176 +1,74 @@
 {
-  "updated_at": "2026-06-13T05:35:18.151843",
+  "updated_at": "2026-06-13T05:44:39.416252",
   "institutional": [
     {
       "date": "20260612",
-      "foreign_lots": 1038179,
-      "trust_lots": 18278,
-      "dealer_lots": 194548
-    },
-    {
-      "date": "20260611",
-      "foreign_lots": -249940,
-      "trust_lots": 71225,
-      "dealer_lots": -778211
-    },
-    {
-      "date": "20260610",
-      "foreign_lots": -527271,
-      "trust_lots": 108041,
-      "dealer_lots": -1051976
-    },
-    {
-      "date": "20260609",
-      "foreign_lots": -109784,
-      "trust_lots": 91016,
-      "dealer_lots": -285919
-    },
-    {
-      "date": "20260608",
-      "foreign_lots": -631543,
-      "trust_lots": 104566,
-      "dealer_lots": -949364
+      "foreign_amt": 0,
+      "trust_amt": 142.3,
+      "dealer_amt": 376.3
     },
     {
       "date": "20260605",
-      "foreign_lots": -646179,
-      "trust_lots": 59390,
-      "dealer_lots": -468028
+      "foreign_amt": 0,
+      "trust_amt": 16.2,
+      "dealer_amt": -1110.6
     },
     {
       "date": "20260604",
-      "foreign_lots": -629268,
-      "trust_lots": 269936,
-      "dealer_lots": -566363
+      "foreign_amt": 0,
+      "trust_amt": 41.7,
+      "dealer_amt": -970.5
     },
     {
       "date": "20260603",
-      "foreign_lots": 643231,
-      "trust_lots": 143041,
-      "dealer_lots": 122624
+      "foreign_amt": 0,
+      "trust_amt": 55.5,
+      "dealer_amt": 459.9
     },
     {
       "date": "20260602",
-      "foreign_lots": -321603,
-      "trust_lots": 388899,
-      "dealer_lots": -273414
+      "foreign_amt": 0,
+      "trust_amt": 28.2,
+      "dealer_amt": -49.3
     },
     {
       "date": "20260601",
-      "foreign_lots": 443258,
-      "trust_lots": 123423,
-      "dealer_lots": -108435
+      "foreign_amt": 0,
+      "trust_amt": 77.6,
+      "dealer_amt": 303.1
+    },
+    {
+      "date": "20260529",
+      "foreign_amt": 0,
+      "trust_amt": 70.2,
+      "dealer_amt": 957.5
+    },
+    {
+      "date": "20260528",
+      "foreign_amt": 0,
+      "trust_amt": -62.1,
+      "dealer_amt": -531.8
+    },
+    {
+      "date": "20260527",
+      "foreign_amt": 0,
+      "trust_amt": -42.2,
+      "dealer_amt": 350.0
+    },
+    {
+      "date": "20260526",
+      "foreign_amt": 0,
+      "trust_amt": 53.8,
+      "dealer_amt": 403.5
     }
   ],
   "institutional_error": null,
   "taifex": null,
   "taifex_raw_sample": null,
   "taifex_error": "HTTP Error 403: Forbidden",
-  "top10": [
-    {
-      "code": "00403A",
-      "name": "主動統一升級50  ",
-      "net_lots": 326545
-    },
-    {
-      "code": "2887",
-      "name": "台新新光金      ",
-      "net_lots": 91935
-    },
-    {
-      "code": "00631L",
-      "name": "元大台灣50正2   ",
-      "net_lots": 57225
-    },
-    {
-      "code": "00981A",
-      "name": "主動統一台股增長",
-      "net_lots": 49578
-    },
-    {
-      "code": "2610",
-      "name": "華航            ",
-      "net_lots": 43788
-    },
-    {
-      "code": "2344",
-      "name": "華邦電          ",
-      "net_lots": 38857
-    },
-    {
-      "code": "2303",
-      "name": "聯電            ",
-      "net_lots": 37955
-    },
-    {
-      "code": "2618",
-      "name": "長榮航          ",
-      "net_lots": 35216
-    },
-    {
-      "code": "3576",
-      "name": "聯合再生        ",
-      "net_lots": 31127
-    },
-    {
-      "code": "2890",
-      "name": "永豐金          ",
-      "net_lots": 30804
-    }
-  ],
-  "top10_error": null,
-  "top10_sell": [
-    {
-      "code": "00919",
-      "name": "群益台灣精選高息",
-      "net_lots": -94039
-    },
-    {
-      "code": "00405A",
-      "name": "主動富邦台灣龍耀",
-      "net_lots": -38660
-    },
-    {
-      "code": "2883",
-      "name": "凱基金          ",
-      "net_lots": -29626
-    },
-    {
-      "code": "2409",
-      "name": "友達            ",
-      "net_lots": -24775
-    },
-    {
-      "code": "6770",
-      "name": "力積電          ",
-      "net_lots": -20973
-    },
-    {
-      "code": "2324",
-      "name": "仁寶            ",
-      "net_lots": -20134
-    },
-    {
-      "code": "00712",
-      "name": "復華富時不動產  ",
-      "net_lots": -17616
-    },
-    {
-      "code": "2313",
-      "name": "華通            ",
-      "net_lots": -16776
-    },
-    {
-      "code": "1402",
-      "name": "遠東新          ",
-      "net_lots": -15343
-    },
-    {
-      "code": "00632R",
-      "name": "元大台灣50反1   ",
-      "net_lots": -13824
-    }
-  ],
+  "top10": null,
+  "top10_error": "無法取得買賣超資料",
+  "top10_sell": null,
   "top10_sell_error": null,
   "vix": {
     "close": 17.68,
