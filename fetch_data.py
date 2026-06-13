@@ -34,6 +34,7 @@ result = {
     "top10": None,
     "top10_error": None,
     "top10_sell": None,
+    "top10_sell_error": None,
     "vix": None,
     "vix_error": None,
     "us_indices": None,
@@ -210,16 +211,25 @@ try:
         raise ValueError("無法取得買賣超資料")
 
     sorted_rows = sorted(top_data, key=lambda r: r["net"], reverse=True)
-    top10_buy = [
-        {"code": r["code"], "name": r["name"], "net_lots": round(r["net"] / 1000)}
-        for r in sorted_rows[:10]
-    ]
-    top10_sell = [
-        {"code": r["code"], "name": r["name"], "net_lots": round(r["net"] / 1000)}
-        for r in sorted_rows[-10:][::-1]
-    ]
-    result["top10"] = top10_buy
-    result["top10_sell"] = top10_sell
+
+    try:
+        top10_buy = [
+            {"code": r["code"], "name": r["name"], "net_lots": round(r["net"] / 1000)}
+            for r in sorted_rows[:10]
+        ]
+        result["top10"] = top10_buy
+    except Exception as e:
+        result["top10_error"] = str(e) or "未知錯誤(買超)"
+
+    try:
+        top10_sell = [
+            {"code": r["code"], "name": r["name"], "net_lots": round(r["net"] / 1000)}
+            for r in sorted_rows[-10:][::-1]
+        ]
+        result["top10_sell"] = top10_sell
+    except Exception as e:
+        result["top10_sell_error"] = str(e) or "未知錯誤(賣超)"
+
 except Exception as e:
     result["top10_error"] = str(e)
 
