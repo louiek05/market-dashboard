@@ -109,73 +109,51 @@ try:
 except Exception as e:
     result["institutional_error"] = str(e)
 
-# 2. 台指期未平倉量 (三大法人，依日期，區分各期貨契約)
+# 2. 台指期未平倉量淨額 (外資/投信/自營商, 最近一日)
 try:
-    import csv
-    import io
+    import re
 
-    today = datetime.date.today()
-    parsed = None
-    raw_text_sample = None
+    req = urllib.request.Request(
+        "https://www.wantgoo.com/futures/institutional-investors/net-open-interest",
+        headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+        }
+    )
+    with urllib.request.urlopen(req, timeout=20, context=_CTX) as res:
+        page = res.read().decode('utf-8')
 
-    for back in range(0, 10):
-        d = today - datetime.timedelta(days=back)
-        date_str = d.strftime("%Y/%m/%d")
-        post_data = f"queryType=2&marketCode=0&dateaddcnt=&commodity_id=TXF&queryDate={date_str}".encode()
-        req = urllib.request.Request(
-            "https://www.taifex.com.tw/cht/3/futContractsDateDown",
-            data=post_data,
-            headers={
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
-                'Content-Type': 'application/x-www-form-urlencoded',
-            }
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=20, context=_CTX) as res:
-                raw = res.read().decode('utf-8-sig')
-            if not raw.strip():
-                continue
-            raw_text_sample = raw[:1000]
-            reader = csv.reader(io.StringIO(raw))
-            rows = [r for r in reader if r and len(r) > 1]
-            if len(rows) < 2:
-                continue
+    # 找出表格內容 (使用正則抓出第一個資料列：日期 + 8組 數字/增減)
+    # 格式範例: 2026/06/04 -69,476 -2,704 -67,975 -1,885 51,858 554 3,219 745 ...
+    pattern = re.compile(
+        r'(\d{4}/\d{2}/\d{2})\s*</td>\s*'
+        r'<td[^>]*>\s*(-?[\d,]+)\s*</td>\s*<td[^>]*>\s*(-?[\d,]+)\s*</td>\s*'  # 外資
+        r'<td[^>]*>\s*(-?[\d,]+)\s*</td>\s*<td[^>]*>\s*(-?[\d,]+)\s*</td>\s*'  # 小外資
+        r'<td[^>]*>\s*(-?[\d,]+)\s*</td>\s*<td[^>]*>\s*(-?[\d,]+)\s*</td>\s*'  # 投信
+        r'<td[^>]*>\s*(-?[\d,]+)\s*</td>\s*<td[^>]*>\s*(-?[\d,]+)\s*</td>'     # 自營商
+    )
+    m = pattern.search(page)
 
-            header = rows[0]
-            parsed = []
-            for row in rows[1:]:
-                if len(row) < len(header):
-                    continue
-                rowdict = dict(zip(header, row))
-                product = rowdict.get("商品名稱", "")
-                if "臺股期貨" not in product and "TXF" not in product and "臺指期貨" not in product:
-                    continue
-                identity = rowdict.get("身份別", rowdict.get("身份", ""))
+    if m:
+        def to_int(s):
+            return int(s.replace(",", ""))
 
-                def numval(key, rd=rowdict):
-                    v = str(rd.get(key, "0")).replace(",", "").strip()
-                    try:
-                        return int(v)
-                    except ValueError:
-                        return 0
-
-                parsed.append({
-                    "identity": identity,
-                    "long_oi": numval("未平倉契約數多方") or numval("未平倉多方") or numval("多空淨額未平倉契約數多方"),
-                    "short_oi": numval("未平倉契約數空方") or numval("未平倉空方") or numval("多空淨額未平倉契約數空方"),
-                    "raw": rowdict,
-                })
-            if parsed:
-                break
-        except Exception:
-            continue
-
-    if parsed:
-        result["taifex"] = parsed
+        date_str, foreign, foreign_chg, sfor, sfor_chg, trust, trust_chg, dealer, dealer_chg = m.groups()
+        result["taifex"] = {
+            "date": date_str,
+            "foreign_net": to_int(foreign),
+            "foreign_chg": to_int(foreign_chg),
+            "trust_net": to_int(trust),
+            "trust_chg": to_int(trust_chg),
+            "dealer_net": to_int(dealer),
+            "dealer_chg": to_int(dealer_chg),
+        }
     else:
-        result["taifex_error"] = "查無台股期貨資料"
-        if raw_text_sample:
-            result["taifex_raw_sample"] = raw_text_sample
+        result["taifex_error"] = "找不到資料表格"
+        # 存一段樣本方便除錯
+        idx = page.find("2026/")
+        if idx == -1:
+            idx = page.find("法人未平倉")
+        result["taifex_raw_sample"] = page[max(0, idx-200):idx+800] if idx != -1 else page[:800]
 except Exception as e:
     result["taifex_error"] = str(e)
 

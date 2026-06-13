@@ -173,22 +173,21 @@ async function load(){
       inst.innerHTML = `<div class="err">資料抓取失敗: ${data.institutional_error || '未知錯誤'}</div>`;
     }
 
-    // 2. 台指期未平倉量
+    // 2. 台指期未平倉量淨額
     const tx = document.getElementById('taifex');
-    if(data.taifex && data.taifex.length){
-      let html = '<table><tr><th>身份</th><th>多方OI</th><th>空方OI</th><th>淨額</th></tr>';
-      data.taifex.forEach(r=>{
-        const long = Number(r.long_oi)||0;
-        const short = Number(r.short_oi)||0;
-        html += `<tr><td>${r.identity||'-'}</td><td>${fmt(long)}</td><td>${fmt(short)}</td><td>${fmtSigned(long-short)}</td></tr>`;
-      });
-      html += '</table><div class="footnote">單位:口</div>';
+    if(data.taifex && data.taifex.date){
+      const t = data.taifex;
+      let html = `<div class="footnote">資料日期: ${t.date}（單位:口，正值=淨多單，負值=淨空單）</div>`;
+      html += '<table><tr><th>身份</th><th>淨額</th><th>較前日增減</th></tr>';
+      html += `<tr><td>外資</td><td>${fmtSigned(t.foreign_net)}</td><td>${fmtSigned(t.foreign_chg)}</td></tr>`;
+      html += `<tr><td>投信</td><td>${fmtSigned(t.trust_net)}</td><td>${fmtSigned(t.trust_chg)}</td></tr>`;
+      html += `<tr><td>自營商</td><td>${fmtSigned(t.dealer_net)}</td><td>${fmtSigned(t.dealer_chg)}</td></tr>`;
+      html += '</table>';
       tx.innerHTML = html;
     } else {
-      let html = `<div class="err">資料抓取失敗或欄位需調整: ${data.taifex_error || '查無台股期貨資料'}</div>`;
+      let html = `<div class="err">資料抓取失敗: ${data.taifex_error || '未知錯誤'}</div>`;
       if(data.taifex_raw_sample){
-        const sample = typeof data.taifex_raw_sample === 'string' ? data.taifex_raw_sample : JSON.stringify(data.taifex_raw_sample, null, 1);
-        html += '<div class="footnote">原始資料樣本(供除錯):</div><pre>' + sample + '</pre>';
+        html += '<div class="footnote">原始資料樣本(供除錯):</div><pre>' + data.taifex_raw_sample + '</pre>';
       }
       tx.innerHTML = html;
     }
