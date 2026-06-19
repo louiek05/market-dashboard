@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-18T11:35:46.598427",
+  "updated_at": "2026-06-19T11:48:24.729454",
   "institutional": [
     {
       "date": "20260618",
       "foreign_amt": 0,
-      "trust_amt": -56.4,
-      "dealer_amt": 366.2
+      "trust_amt": -53.6,
+      "dealer_amt": 366.4
     },
     {
       "date": "20260617",
@@ -173,9 +173,9 @@
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 17.45,
-    "change": -0.99,
-    "change_pct": -5.37
+    "close": 17.13,
+    "change": -1.31,
+    "change_pct": -7.1
   },
   "vix_error": null,
   "us_indices": [
