@@ -1,11 +1,23 @@
 {
-  "updated_at": "2026-07-01T10:53:31.359699",
+  "updated_at": "2026-07-02T10:17:51.977564",
   "institutional": [
+    {
+      "date": "20260702",
+      "foreign_amt": 0,
+      "trust_amt": 91.2,
+      "dealer_amt": -933.7
+    },
     {
       "date": "20260701",
       "foreign_amt": 0,
-      "trust_amt": 146.2,
+      "trust_amt": 156.0,
       "dealer_amt": 383.1
+    },
+    {
+      "date": "20260630",
+      "foreign_amt": 0,
+      "trust_amt": 3.7,
+      "dealer_amt": 140.8
     },
     {
       "date": "20260629",
@@ -26,12 +38,6 @@
       "dealer_amt": -475.1
     },
     {
-      "date": "20260624",
-      "foreign_amt": 0,
-      "trust_amt": 33.0,
-      "dealer_amt": -2138.9
-    },
-    {
       "date": "20260623",
       "foreign_amt": 0,
       "trust_amt": 72.4,
@@ -48,6 +54,12 @@
       "foreign_amt": 0,
       "trust_amt": -53.6,
       "dealer_amt": 366.4
+    },
+    {
+      "date": "20260617",
+      "foreign_amt": 0,
+      "trust_amt": -2.1,
+      "dealer_amt": -249.5
     }
   ],
   "institutional_error": null,
@@ -56,136 +68,136 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "00403A",
-      "name": "主動統一升級50  ",
-      "net_lots": 246398
+      "code": "1314",
+      "name": "中石化          ",
+      "net_lots": 33782
     },
     {
-      "code": "00981A",
-      "name": "主動統一台股增長",
-      "net_lots": 204098
+      "code": "00632R",
+      "name": "元大台灣50反1   ",
+      "net_lots": 27256
     },
     {
-      "code": "00631L",
-      "name": "元大台灣50正2   ",
-      "net_lots": 73007
+      "code": "1301",
+      "name": "台塑            ",
+      "net_lots": 26648
+    },
+    {
+      "code": "1312",
+      "name": "國喬            ",
+      "net_lots": 17066
+    },
+    {
+      "code": "2105",
+      "name": "正新            ",
+      "net_lots": 15686
     },
     {
       "code": "00405A",
       "name": "主動富邦台灣龍耀",
-      "net_lots": 52291
+      "net_lots": 13069
     },
     {
-      "code": "00402A",
-      "name": "主動安聯美國科技",
-      "net_lots": 43500
+      "code": "2883",
+      "name": "凱基金          ",
+      "net_lots": 12765
     },
     {
-      "code": "00407A",
-      "name": "主動凱基台灣    ",
-      "net_lots": 32224
+      "code": "00403A",
+      "name": "主動統一升級50  ",
+      "net_lots": 12164
     },
     {
-      "code": "00988A",
-      "name": "主動統一全球創新",
-      "net_lots": 31121
+      "code": "1303",
+      "name": "南亞            ",
+      "net_lots": 11929
     },
     {
-      "code": "2303",
-      "name": "聯電            ",
-      "net_lots": 25742
-    },
-    {
-      "code": "00992A",
-      "name": "主動群益科技創新",
-      "net_lots": 25336
-    },
-    {
-      "code": "009816",
-      "name": "凱基台灣TOP50   ",
-      "net_lots": 24876
+      "code": "00918",
+      "name": "大華優利高填息30",
+      "net_lots": 11298
     }
   ],
   "top10_error": null,
   "top10_sell": [
     {
-      "code": "2409",
-      "name": "友達            ",
-      "net_lots": -171700
+      "code": "00631L",
+      "name": "元大台灣50正2   ",
+      "net_lots": -91231
+    },
+    {
+      "code": "00988A",
+      "name": "主動統一全球創新",
+      "net_lots": -81840
     },
     {
       "code": "00927",
       "name": "群益半導體收益  ",
-      "net_lots": -51390
+      "net_lots": -55105
     },
     {
-      "code": "00632R",
-      "name": "元大台灣50反1   ",
-      "net_lots": -33854
+      "code": "00991A",
+      "name": "主動復華未來50  ",
+      "net_lots": -52765
     },
     {
-      "code": "2344",
-      "name": "華邦電          ",
-      "net_lots": -33246
+      "code": "2409",
+      "name": "友達            ",
+      "net_lots": -49974
     },
     {
-      "code": "9904",
-      "name": "寶成            ",
-      "net_lots": -29240
+      "code": "00997A",
+      "name": "主動群益美國增長",
+      "net_lots": -48137
     },
     {
-      "code": "1101",
-      "name": "台泥            ",
-      "net_lots": -26834
+      "code": "0056",
+      "name": "元大高股息      ",
+      "net_lots": -39985
     },
     {
-      "code": "2002",
-      "name": "中鋼            ",
-      "net_lots": -25526
+      "code": "00637L",
+      "name": "元大滬深300正2  ",
+      "net_lots": -35968
     },
     {
-      "code": "2337",
-      "name": "旺宏            ",
-      "net_lots": -25175
+      "code": "00990A",
+      "name": "主動元大AI新經濟",
+      "net_lots": -29364
     },
     {
-      "code": "2610",
-      "name": "華航            ",
-      "net_lots": -24449
-    },
-    {
-      "code": "6116",
-      "name": "彩晶            ",
-      "net_lots": -23592
+      "code": "009816",
+      "name": "凱基台灣TOP50   ",
+      "net_lots": -28693
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 16.73,
-    "change": 0.28,
-    "change_pct": 1.7
+    "close": 16.77,
+    "change": 0.18,
+    "change_pct": 1.08
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 26213.72,
-      "change_pct": 1.52
+      "close": 26040.03,
+      "change_pct": -0.66
     },
     {
       "label": "費半指數",
-      "close": 14246.96,
-      "change_pct": 3.92
+      "close": 13353.28,
+      "change_pct": -6.27
     },
     {
       "label": "S&P 500",
-      "close": 7499.36,
-      "change_pct": 0.79
+      "close": 7483.23,
+      "change_pct": -0.22
     },
     {
       "label": "道瓊",
-      "close": 52319.2,
-      "change_pct": 0.26
+      "close": 52305.24,
+      "change_pct": -0.03
     }
   ],
   "us_indices_error": null
