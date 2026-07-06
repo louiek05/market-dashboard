@@ -1,10 +1,16 @@
 {
-  "updated_at": "2026-07-03T10:13:48.058617",
+  "updated_at": "2026-07-06T11:47:44.731087",
   "institutional": [
+    {
+      "date": "20260706",
+      "foreign_amt": 0,
+      "trust_amt": 69.1,
+      "dealer_amt": -352.3
+    },
     {
       "date": "20260703",
       "foreign_amt": 0,
-      "trust_amt": 76.0,
+      "trust_amt": 75.0,
       "dealer_amt": -810.4
     },
     {
@@ -32,6 +38,12 @@
       "dealer_amt": -89.3
     },
     {
+      "date": "20260626",
+      "foreign_amt": 0,
+      "trust_amt": 101.0,
+      "dealer_amt": -2139.2
+    },
+    {
       "date": "20260625",
       "foreign_amt": 0,
       "trust_amt": 174.2,
@@ -48,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": 72.4,
       "dealer_amt": -555.8
-    },
-    {
-      "date": "20260622",
-      "foreign_amt": 0,
-      "trust_amt": -105.2,
-      "dealer_amt": 805.6
     }
   ],
   "institutional_error": null,
@@ -62,114 +68,114 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "2887",
-      "name": "台新新光金      ",
-      "net_lots": 44059
+      "code": "3481",
+      "name": "群創            ",
+      "net_lots": 123297
     },
     {
-      "code": "00981A",
-      "name": "主動統一台股增長",
-      "net_lots": 41016
+      "code": "2409",
+      "name": "友達            ",
+      "net_lots": 98513
     },
     {
-      "code": "00632R",
-      "name": "元大台灣50反1   ",
-      "net_lots": 36452
-    },
-    {
-      "code": "1314",
-      "name": "中石化          ",
-      "net_lots": 35588
-    },
-    {
-      "code": "00403A",
-      "name": "主動統一升級50  ",
-      "net_lots": 28748
-    },
-    {
-      "code": "2303",
-      "name": "聯電            ",
-      "net_lots": 23270
-    },
-    {
-      "code": "2883",
-      "name": "凱基金          ",
-      "net_lots": 22709
-    },
-    {
-      "code": "2834",
-      "name": "臺企銀          ",
-      "net_lots": 19856
-    },
-    {
-      "code": "00919",
-      "name": "群益台灣精選高息",
-      "net_lots": 16067
+      "code": "00631L",
+      "name": "元大台灣50正2   ",
+      "net_lots": 37306
     },
     {
       "code": "1717",
       "name": "長興            ",
-      "net_lots": 14953
+      "net_lots": 25413
+    },
+    {
+      "code": "2890",
+      "name": "永豐金          ",
+      "net_lots": 24857
+    },
+    {
+      "code": "1314",
+      "name": "中石化          ",
+      "net_lots": 22266
+    },
+    {
+      "code": "2883",
+      "name": "凱基金          ",
+      "net_lots": 18594
+    },
+    {
+      "code": "8150",
+      "name": "南茂            ",
+      "net_lots": 17878
+    },
+    {
+      "code": "2882",
+      "name": "國泰金          ",
+      "net_lots": 17874
+    },
+    {
+      "code": "2449",
+      "name": "京元電子        ",
+      "net_lots": 17492
     }
   ],
   "top10_error": null,
   "top10_sell": [
     {
-      "code": "00631L",
-      "name": "元大台灣50正2   ",
-      "net_lots": -68434
+      "code": "00991A",
+      "name": "主動復華未來50  ",
+      "net_lots": -132935
     },
     {
-      "code": "3481",
-      "name": "群創            ",
-      "net_lots": -59811
+      "code": "00981A",
+      "name": "主動統一台股增長",
+      "net_lots": -120153
+    },
+    {
+      "code": "00407A",
+      "name": "主動凱基台灣    ",
+      "net_lots": -81283
+    },
+    {
+      "code": "00405A",
+      "name": "主動富邦台灣龍耀",
+      "net_lots": -57337
     },
     {
       "code": "00988A",
       "name": "主動統一全球創新",
-      "net_lots": -57322
+      "net_lots": -41995
+    },
+    {
+      "code": "00400A",
+      "name": "主動國泰動能高息",
+      "net_lots": -41374
+    },
+    {
+      "code": "1714",
+      "name": "和桐            ",
+      "net_lots": -38995
+    },
+    {
+      "code": "00403A",
+      "name": "主動統一升級50  ",
+      "net_lots": -38749
     },
     {
       "code": "00927",
       "name": "群益半導體收益  ",
-      "net_lots": -48290
+      "net_lots": -35641
     },
     {
-      "code": "00997A",
-      "name": "主動群益美國增長",
-      "net_lots": -48109
-    },
-    {
-      "code": "009816",
-      "name": "凱基台灣TOP50   ",
-      "net_lots": -42969
-    },
-    {
-      "code": "00990A",
-      "name": "主動元大AI新經濟",
-      "net_lots": -39861
-    },
-    {
-      "code": "00991A",
-      "name": "主動復華未來50  ",
-      "net_lots": -37045
-    },
-    {
-      "code": "0050",
-      "name": "元大台灣50      ",
-      "net_lots": -35219
-    },
-    {
-      "code": "2344",
-      "name": "華邦電          ",
-      "net_lots": -26729
+      "code": "6770",
+      "name": "力積電          ",
+      "net_lots": -34062
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 15.96,
-    "change": -0.19,
-    "change_pct": -1.18
+    "close": 16.32,
+    "change": 0.17,
+    "change_pct": 1.05
   },
   "vix_error": null,
   "us_indices": [
