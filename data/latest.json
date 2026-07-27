@@ -1,10 +1,16 @@
 {
-  "updated_at": "2026-07-24T09:53:52.496532",
+  "updated_at": "2026-07-27T10:53:41.599925",
   "institutional": [
+    {
+      "date": "20260727",
+      "foreign_amt": 0,
+      "trust_amt": -2.8,
+      "dealer_amt": 1.8
+    },
     {
       "date": "20260724",
       "foreign_amt": 0,
-      "trust_amt": 57.1,
+      "trust_amt": 47.6,
       "dealer_amt": -721.0
     },
     {
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": 110.0,
       "dealer_amt": -901.8
-    },
-    {
-      "date": "20260713",
-      "foreign_amt": 0,
-      "trust_amt": 125.8,
-      "dealer_amt": -306.6
     }
   ],
   "institutional_error": null,
@@ -68,54 +68,54 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "3231",
-      "name": "緯創            ",
-      "net_lots": 44453
-    },
-    {
-      "code": "2002",
-      "name": "中鋼            ",
-      "net_lots": 30753
-    },
-    {
       "code": "00632R",
       "name": "元大台灣50反1   ",
-      "net_lots": 29793
+      "net_lots": 65382
     },
     {
-      "code": "2883",
-      "name": "凱基金          ",
-      "net_lots": 17101
+      "code": "3481",
+      "name": "群創            ",
+      "net_lots": 58024
     },
     {
-      "code": "2618",
-      "name": "長榮航          ",
-      "net_lots": 16702
+      "code": "2303",
+      "name": "聯電            ",
+      "net_lots": 28075
     },
     {
-      "code": "1402",
-      "name": "遠東新          ",
-      "net_lots": 15286
-    },
-    {
-      "code": "2609",
-      "name": "陽明            ",
-      "net_lots": 11872
-    },
-    {
-      "code": "2887",
-      "name": "台新新光金      ",
-      "net_lots": 11276
-    },
-    {
-      "code": "2634",
-      "name": "漢翔            ",
-      "net_lots": 11025
+      "code": "2812",
+      "name": "台中銀          ",
+      "net_lots": 24623
     },
     {
       "code": "2834",
       "name": "臺企銀          ",
-      "net_lots": 10795
+      "net_lots": 21283
+    },
+    {
+      "code": "2618",
+      "name": "長榮航          ",
+      "net_lots": 21030
+    },
+    {
+      "code": "5880",
+      "name": "合庫金          ",
+      "net_lots": 17788
+    },
+    {
+      "code": "2002",
+      "name": "中鋼            ",
+      "net_lots": 17719
+    },
+    {
+      "code": "1101",
+      "name": "台泥            ",
+      "net_lots": 17627
+    },
+    {
+      "code": "2890",
+      "name": "永豐金          ",
+      "net_lots": 17625
     }
   ],
   "top10_error": null,
@@ -123,59 +123,59 @@
     {
       "code": "00403A",
       "name": "主動統一升級50  ",
-      "net_lots": -169290
-    },
-    {
-      "code": "00685L",
-      "name": "群益臺灣加權正2 ",
-      "net_lots": -160959
+      "net_lots": -94501
     },
     {
       "code": "00406A",
       "name": "主動中信台灣收益",
-      "net_lots": -103142
+      "net_lots": -86028
     },
     {
-      "code": "00631L",
-      "name": "元大台灣50正2   ",
-      "net_lots": -85072
+      "code": "00685L",
+      "name": "群益臺灣加權正2 ",
+      "net_lots": -69236
     },
     {
       "code": "009816",
       "name": "凱基台灣TOP50   ",
-      "net_lots": -61849
+      "net_lots": -41994
+    },
+    {
+      "code": "0050",
+      "name": "元大台灣50      ",
+      "net_lots": -37211
+    },
+    {
+      "code": "00631L",
+      "name": "元大台灣50正2   ",
+      "net_lots": -29071
     },
     {
       "code": "00981A",
       "name": "主動統一台股增長",
-      "net_lots": -57940
+      "net_lots": -23422
+    },
+    {
+      "code": "0056",
+      "name": "元大高股息      ",
+      "net_lots": -22412
     },
     {
       "code": "00405A",
       "name": "主動富邦台灣龍耀",
-      "net_lots": -57481
+      "net_lots": -17126
     },
     {
-      "code": "6770",
-      "name": "力積電          ",
-      "net_lots": -53296
-    },
-    {
-      "code": "00991A",
-      "name": "主動復華未來50  ",
-      "net_lots": -49577
-    },
-    {
-      "code": "00673R",
-      "name": "期元大S&P原油反1",
-      "net_lots": -41168
+      "code": "00407A",
+      "name": "主動凱基台灣    ",
+      "net_lots": -15739
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 18.63,
-    "change": -0.07,
-    "change_pct": -0.37
+    "close": 17.6,
+    "change": -1.1,
+    "change_pct": -5.88
   },
   "vix_error": null,
   "us_indices": [
