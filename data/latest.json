@@ -1,10 +1,16 @@
 {
-  "updated_at": "2026-08-03T10:54:12.866225",
+  "updated_at": "2026-08-04T10:09:28.770108",
   "institutional": [
+    {
+      "date": "20260804",
+      "foreign_amt": 0,
+      "trust_amt": 252.7,
+      "dealer_amt": -251.6
+    },
     {
       "date": "20260803",
       "foreign_amt": 0,
-      "trust_amt": 210.7,
+      "trust_amt": 233.2,
       "dealer_amt": -398.4
     },
     {
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": 189.0,
       "dealer_amt": 149.5
-    },
-    {
-      "date": "20260721",
-      "foreign_amt": 0,
-      "trust_amt": 171.1,
-      "dealer_amt": -8.2
     }
   ],
   "institutional_error": null,
@@ -68,114 +68,114 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "00403A",
-      "name": "主動統一升級50  ",
-      "net_lots": 127652
-    },
-    {
       "code": "00981A",
       "name": "主動統一台股增長",
-      "net_lots": 111982
-    },
-    {
-      "code": "00410A",
-      "name": "主動永豐科技趨勢",
-      "net_lots": 105708
+      "net_lots": 82633
     },
     {
       "code": "00991A",
       "name": "主動復華未來50  ",
-      "net_lots": 63034
+      "net_lots": 78596
     },
     {
-      "code": "00407A",
-      "name": "主動凱基台灣    ",
-      "net_lots": 27378
+      "code": "00403A",
+      "name": "主動統一升級50  ",
+      "net_lots": 67190
     },
     {
-      "code": "2344",
-      "name": "華邦電          ",
-      "net_lots": 26725
-    },
-    {
-      "code": "3231",
-      "name": "緯創            ",
-      "net_lots": 25306
-    },
-    {
-      "code": "00918",
-      "name": "大華優利高填息30",
-      "net_lots": 14815
+      "code": "2301",
+      "name": "光寶科          ",
+      "net_lots": 28759
     },
     {
       "code": "2408",
       "name": "南亞科          ",
-      "net_lots": 13511
+      "net_lots": 26361
     },
     {
-      "code": "2356",
-      "name": "英業達          ",
-      "net_lots": 12989
+      "code": "3231",
+      "name": "緯創            ",
+      "net_lots": 23979
+    },
+    {
+      "code": "00410A",
+      "name": "主動永豐科技趨勢",
+      "net_lots": 22620
+    },
+    {
+      "code": "0056",
+      "name": "元大高股息      ",
+      "net_lots": 18081
+    },
+    {
+      "code": "00407A",
+      "name": "主動凱基台灣    ",
+      "net_lots": 16275
+    },
+    {
+      "code": "1216",
+      "name": "統一            ",
+      "net_lots": 15373
     }
   ],
   "top10_error": null,
   "top10_sell": [
     {
-      "code": "2303",
-      "name": "聯電            ",
-      "net_lots": -77551
+      "code": "00632R",
+      "name": "元大台灣50反1   ",
+      "net_lots": -50315
     },
     {
-      "code": "00631L",
-      "name": "元大台灣50正2   ",
-      "net_lots": -61235
+      "code": "009826",
+      "name": "貝萊德世界股票  ",
+      "net_lots": -38627
     },
     {
-      "code": "00878",
-      "name": "國泰永續高股息  ",
-      "net_lots": -43314
-    },
-    {
-      "code": "00685L",
-      "name": "群益臺灣加權正2 ",
-      "net_lots": -40729
-    },
-    {
-      "code": "1303",
-      "name": "南亞            ",
-      "net_lots": -35536
-    },
-    {
-      "code": "00881",
-      "name": "國泰台灣科技龍頭",
-      "net_lots": -33951
-    },
-    {
-      "code": "6770",
-      "name": "力積電          ",
-      "net_lots": -32408
+      "code": "2801",
+      "name": "彰銀            ",
+      "net_lots": -35770
     },
     {
       "code": "2834",
       "name": "臺企銀          ",
-      "net_lots": -27856
+      "net_lots": -30640
     },
     {
-      "code": "1101",
-      "name": "台泥            ",
-      "net_lots": -23763
+      "code": "2812",
+      "name": "台中銀          ",
+      "net_lots": -28215
+    },
+    {
+      "code": "00878",
+      "name": "國泰永續高股息  ",
+      "net_lots": -25659
+    },
+    {
+      "code": "1718",
+      "name": "中纖            ",
+      "net_lots": -25208
     },
     {
       "code": "0050",
       "name": "元大台灣50      ",
-      "net_lots": -23033
+      "net_lots": -24780
+    },
+    {
+      "code": "00405A",
+      "name": "主動富邦台灣龍耀",
+      "net_lots": -18787
+    },
+    {
+      "code": "9904",
+      "name": "寶成            ",
+      "net_lots": -17612
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 15.97,
-    "change": -0.02,
-    "change_pct": -0.13
+    "close": 15.77,
+    "change": -0.22,
+    "change_pct": -1.38
   },
   "vix_error": null,
   "us_indices": [
