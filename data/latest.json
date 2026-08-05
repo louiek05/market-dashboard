@@ -1,10 +1,16 @@
 {
-  "updated_at": "2026-08-04T10:09:28.770108",
+  "updated_at": "2026-08-05T10:06:31.917840",
   "institutional": [
+    {
+      "date": "20260805",
+      "foreign_amt": 0,
+      "trust_amt": 86.4,
+      "dealer_amt": 917.6
+    },
     {
       "date": "20260804",
       "foreign_amt": 0,
-      "trust_amt": 252.7,
+      "trust_amt": 271.7,
       "dealer_amt": -251.6
     },
     {
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": 73.7,
       "dealer_amt": 111.5
-    },
-    {
-      "date": "20260722",
-      "foreign_amt": 0,
-      "trust_amt": 189.0,
-      "dealer_amt": 149.5
     }
   ],
   "institutional_error": null,
@@ -68,54 +68,54 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "00981A",
-      "name": "主動統一台股增長",
-      "net_lots": 82633
+      "code": "00685L",
+      "name": "群益臺灣加權正2 ",
+      "net_lots": 201921
     },
     {
-      "code": "00991A",
-      "name": "主動復華未來50  ",
-      "net_lots": 78596
+      "code": "00631L",
+      "name": "元大台灣50正2   ",
+      "net_lots": 179549
     },
     {
       "code": "00403A",
       "name": "主動統一升級50  ",
-      "net_lots": 67190
+      "net_lots": 174112
     },
     {
-      "code": "2301",
-      "name": "光寶科          ",
-      "net_lots": 28759
+      "code": "0050",
+      "name": "元大台灣50      ",
+      "net_lots": 84638
     },
     {
-      "code": "2408",
-      "name": "南亞科          ",
-      "net_lots": 26361
-    },
-    {
-      "code": "3231",
-      "name": "緯創            ",
-      "net_lots": 23979
-    },
-    {
-      "code": "00410A",
-      "name": "主動永豐科技趨勢",
-      "net_lots": 22620
-    },
-    {
-      "code": "0056",
-      "name": "元大高股息      ",
-      "net_lots": 18081
+      "code": "009816",
+      "name": "凱基台灣TOP50   ",
+      "net_lots": 72364
     },
     {
       "code": "00407A",
       "name": "主動凱基台灣    ",
-      "net_lots": 16275
+      "net_lots": 53127
     },
     {
-      "code": "1216",
-      "name": "統一            ",
-      "net_lots": 15373
+      "code": "00981A",
+      "name": "主動統一台股增長",
+      "net_lots": 50893
+    },
+    {
+      "code": "3231",
+      "name": "緯創            ",
+      "net_lots": 38106
+    },
+    {
+      "code": "2883",
+      "name": "凱基金          ",
+      "net_lots": 37269
+    },
+    {
+      "code": "0056",
+      "name": "元大高股息      ",
+      "net_lots": 36756
     }
   ],
   "top10_error": null,
@@ -123,81 +123,81 @@
     {
       "code": "00632R",
       "name": "元大台灣50反1   ",
-      "net_lots": -50315
+      "net_lots": -101388
+    },
+    {
+      "code": "3481",
+      "name": "群創            ",
+      "net_lots": -42405
     },
     {
       "code": "009826",
       "name": "貝萊德世界股票  ",
-      "net_lots": -38627
+      "net_lots": -37490
     },
     {
-      "code": "2801",
-      "name": "彰銀            ",
-      "net_lots": -35770
+      "code": "2409",
+      "name": "友達            ",
+      "net_lots": -30757
     },
     {
-      "code": "2834",
-      "name": "臺企銀          ",
-      "net_lots": -30640
-    },
-    {
-      "code": "2812",
-      "name": "台中銀          ",
-      "net_lots": -28215
-    },
-    {
-      "code": "00878",
-      "name": "國泰永續高股息  ",
-      "net_lots": -25659
-    },
-    {
-      "code": "1718",
-      "name": "中纖            ",
-      "net_lots": -25208
-    },
-    {
-      "code": "0050",
-      "name": "元大台灣50      ",
-      "net_lots": -24780
-    },
-    {
-      "code": "00405A",
-      "name": "主動富邦台灣龍耀",
-      "net_lots": -18787
+      "code": "2337",
+      "name": "旺宏            ",
+      "net_lots": -26382
     },
     {
       "code": "9904",
       "name": "寶成            ",
-      "net_lots": -17612
+      "net_lots": -25658
+    },
+    {
+      "code": "2801",
+      "name": "彰銀            ",
+      "net_lots": -24498
+    },
+    {
+      "code": "2834",
+      "name": "臺企銀          ",
+      "net_lots": -24473
+    },
+    {
+      "code": "2303",
+      "name": "聯電            ",
+      "net_lots": -23785
+    },
+    {
+      "code": "00991A",
+      "name": "主動復華未來50  ",
+      "net_lots": -23138
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 15.77,
-    "change": -0.22,
-    "change_pct": -1.38
+    "close": 16.31,
+    "change": -0.19,
+    "change_pct": -1.15
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 25373.85,
-      "change_pct": 1.0
+      "close": 26584.99,
+      "change_pct": 2.59
     },
     {
       "label": "費半指數",
-      "close": 11311.08,
-      "change_pct": 0.07
+      "close": 12179.26,
+      "change_pct": 6.55
     },
     {
       "label": "S&P 500",
-      "close": 7489.72,
-      "change_pct": 0.7
+      "close": 7736.52,
+      "change_pct": 1.79
     },
     {
       "label": "道瓊",
-      "close": 52485.03,
-      "change_pct": 0.53
+      "close": 54085.88,
+      "change_pct": 1.71
     }
   ],
   "us_indices_error": null
