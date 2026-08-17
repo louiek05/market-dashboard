@@ -1,10 +1,16 @@
 {
-  "updated_at": "2026-08-14T08:44:31.847735",
+  "updated_at": "2026-08-17T08:06:28.200004",
   "institutional": [
+    {
+      "date": "20260817",
+      "foreign_amt": 0,
+      "trust_amt": -177.5,
+      "dealer_amt": 468.5
+    },
     {
       "date": "20260814",
       "foreign_amt": 0,
-      "trust_amt": 72.0,
+      "trust_amt": 79.7,
       "dealer_amt": 436.9
     },
     {
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": 271.7,
       "dealer_amt": -251.6
-    },
-    {
-      "date": "20260803",
-      "foreign_amt": 0,
-      "trust_amt": 233.2,
-      "dealer_amt": -398.4
     }
   ],
   "institutional_error": null,
@@ -163,7 +163,7 @@
     {
       "code": "2327",
       "name": "國巨*           ",
-      "net_lots": -22402
+      "net_lots": -21373
     },
     {
       "code": "2002",
@@ -173,31 +173,31 @@
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 14.63,
-    "change": 0.0,
-    "change_pct": 0.0
+    "close": 14.93,
+    "change": 0.68,
+    "change_pct": 4.77
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 26803.03,
-      "change_pct": 0.81
+      "close": 26729.16,
+      "change_pct": -0.28
     },
     {
       "label": "費半指數",
-      "close": 12456.0,
-      "change_pct": 0.46
+      "close": 12417.05,
+      "change_pct": -0.31
     },
     {
       "label": "S&P 500",
-      "close": 7798.99,
-      "change_pct": 0.65
+      "close": 7785.76,
+      "change_pct": -0.17
     },
     {
       "label": "道瓊",
-      "close": 53839.99,
-      "change_pct": 0.13
+      "close": 53732.41,
+      "change_pct": -0.2
     }
   ],
   "us_indices_error": null
