@@ -1,10 +1,16 @@
 {
-  "updated_at": "2026-08-19T08:02:45.696818",
+  "updated_at": "2026-08-20T08:04:15.546057",
   "institutional": [
+    {
+      "date": "20260820",
+      "foreign_amt": 0,
+      "trust_amt": -12.1,
+      "dealer_amt": -23.3
+    },
     {
       "date": "20260819",
       "foreign_amt": 0,
-      "trust_amt": -120.9,
+      "trust_amt": -166.0,
       "dealer_amt": -587.6
     },
     {
@@ -50,12 +56,6 @@
       "dealer_amt": 702.1
     },
     {
-      "date": "20260807",
-      "foreign_amt": 0,
-      "trust_amt": -12.0,
-      "dealer_amt": -416.8
-    },
-    {
       "date": "20260806",
       "foreign_amt": 0,
       "trust_amt": 94.1,
@@ -68,54 +68,54 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "00403A",
-      "name": "主動統一升級50  ",
-      "net_lots": 65826
-    },
-    {
-      "code": "00991A",
-      "name": "主動復華未來50  ",
-      "net_lots": 49863
+      "code": "00632R",
+      "name": "元大台灣50反1   ",
+      "net_lots": 54376
     },
     {
       "code": "00981A",
       "name": "主動統一台股增長",
-      "net_lots": 49255
-    },
-    {
-      "code": "2886",
-      "name": "兆豐金          ",
-      "net_lots": 22536
-    },
-    {
-      "code": "00405A",
-      "name": "主動富邦台灣龍耀",
-      "net_lots": 22532
-    },
-    {
-      "code": "00407A",
-      "name": "主動凱基台灣    ",
-      "net_lots": 20406
-    },
-    {
-      "code": "2634",
-      "name": "漢翔            ",
-      "net_lots": 15276
+      "net_lots": 39443
     },
     {
       "code": "2609",
       "name": "陽明            ",
-      "net_lots": 15216
+      "net_lots": 31473
     },
     {
-      "code": "2603",
-      "name": "長榮            ",
-      "net_lots": 14763
+      "code": "00991A",
+      "name": "主動復華未來50  ",
+      "net_lots": 29565
     },
     {
-      "code": "00988A",
-      "name": "主動統一全球創新",
-      "net_lots": 13501
+      "code": "00405A",
+      "name": "主動富邦台灣龍耀",
+      "net_lots": 24119
+    },
+    {
+      "code": "3045",
+      "name": "台灣大          ",
+      "net_lots": 18238
+    },
+    {
+      "code": "00664R",
+      "name": "國泰臺灣加權反1 ",
+      "net_lots": 14769
+    },
+    {
+      "code": "2886",
+      "name": "兆豐金          ",
+      "net_lots": 14564
+    },
+    {
+      "code": "1216",
+      "name": "統一            ",
+      "net_lots": 12092
+    },
+    {
+      "code": "6116",
+      "name": "彩晶            ",
+      "net_lots": 8624
     }
   ],
   "top10_error": null,
@@ -123,81 +123,81 @@
     {
       "code": "00406A",
       "name": "主動中信台灣收益",
-      "net_lots": -167474
-    },
-    {
-      "code": "00929",
-      "name": "復華台灣科技優息",
-      "net_lots": -70677
-    },
-    {
-      "code": "00881",
-      "name": "國泰台灣科技龍頭",
-      "net_lots": -65841
-    },
-    {
-      "code": "00878",
-      "name": "國泰永續高股息  ",
-      "net_lots": -59573
+      "net_lots": -164420
     },
     {
       "code": "00685L",
       "name": "群益臺灣加權正2 ",
-      "net_lots": -54093
+      "net_lots": -80852
     },
     {
-      "code": "6770",
-      "name": "力積電          ",
-      "net_lots": -38437
-    },
-    {
-      "code": "2409",
-      "name": "友達            ",
-      "net_lots": -36529
-    },
-    {
-      "code": "009826",
-      "name": "貝萊德世界股票  ",
-      "net_lots": -25583
-    },
-    {
-      "code": "2885",
-      "name": "元大金          ",
-      "net_lots": -24696
+      "code": "3481",
+      "name": "群創            ",
+      "net_lots": -66864
     },
     {
       "code": "00631L",
       "name": "元大台灣50正2   ",
-      "net_lots": -23057
+      "net_lots": -65121
+    },
+    {
+      "code": "0050",
+      "name": "元大台灣50      ",
+      "net_lots": -52568
+    },
+    {
+      "code": "6770",
+      "name": "力積電          ",
+      "net_lots": -50423
+    },
+    {
+      "code": "00403A",
+      "name": "主動統一升級50  ",
+      "net_lots": -39595
+    },
+    {
+      "code": "00953B",
+      "name": "群益優選非投等債",
+      "net_lots": -37013
+    },
+    {
+      "code": "009816",
+      "name": "凱基台灣TOP50   ",
+      "net_lots": -34301
+    },
+    {
+      "code": "00881",
+      "name": "國泰台灣科技龍頭",
+      "net_lots": -27730
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 15.82,
-    "change": -0.02,
-    "change_pct": -0.13
+    "close": 14.97,
+    "change": 0.08,
+    "change_pct": 0.54
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 26289.71,
-      "change_pct": -1.33
+      "close": 26331.09,
+      "change_pct": 0.16
     },
     {
       "label": "費半指數",
-      "close": 11992.46,
-      "change_pct": -4.98
+      "close": 11738.23,
+      "change_pct": -2.12
     },
     {
       "label": "S&P 500",
-      "close": 7691.76,
-      "change_pct": -0.69
+      "close": 7707.98,
+      "change_pct": 0.21
     },
     {
       "label": "道瓊",
-      "close": 53343.4,
-      "change_pct": -0.22
+      "close": 53463.05,
+      "change_pct": 0.22
     }
   ],
   "us_indices_error": null
