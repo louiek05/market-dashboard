@@ -1,10 +1,16 @@
 {
-  "updated_at": "2026-08-21T08:04:53.405603",
+  "updated_at": "2026-08-24T08:10:31.145432",
   "institutional": [
+    {
+      "date": "20260824",
+      "foreign_amt": 0,
+      "trust_amt": 37.1,
+      "dealer_amt": -200.8
+    },
     {
       "date": "20260821",
       "foreign_amt": 0,
-      "trust_amt": 18.8,
+      "trust_amt": 21.0,
       "dealer_amt": 312.3
     },
     {
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": 32.2,
       "dealer_amt": 247.9
-    },
-    {
-      "date": "20260810",
-      "foreign_amt": 0,
-      "trust_amt": 34.0,
-      "dealer_amt": 702.1
     }
   ],
   "institutional_error": null,
@@ -68,54 +68,54 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "009829",
-      "name": "大華韓國KOSPI50 ",
-      "net_lots": 44481
+      "code": "6770",
+      "name": "力積電          ",
+      "net_lots": 40104
     },
     {
-      "code": "00919",
-      "name": "群益台灣精選高息",
-      "net_lots": 40983
+      "code": "00632R",
+      "name": "元大台灣50反1   ",
+      "net_lots": 38449
+    },
+    {
+      "code": "2324",
+      "name": "仁寶            ",
+      "net_lots": 29472
     },
     {
       "code": "2609",
       "name": "陽明            ",
-      "net_lots": 40856
+      "net_lots": 29205
     },
     {
-      "code": "2883",
-      "name": "凱基金          ",
-      "net_lots": 36414
+      "code": "2303",
+      "name": "聯電            ",
+      "net_lots": 19101
     },
     {
-      "code": "00631L",
-      "name": "元大台灣50正2   ",
-      "net_lots": 28579
+      "code": "009821",
+      "name": "野村稀土關鍵資源",
+      "net_lots": 18422
     },
     {
-      "code": "00685L",
-      "name": "群益臺灣加權正2 ",
-      "net_lots": 26118
+      "code": "2426",
+      "name": "鼎元            ",
+      "net_lots": 13788
     },
     {
-      "code": "1402",
-      "name": "遠東新          ",
-      "net_lots": 25585
+      "code": "6116",
+      "name": "彩晶            ",
+      "net_lots": 11549
     },
     {
-      "code": "00991A",
-      "name": "主動復華未來50  ",
-      "net_lots": 22848
+      "code": "2615",
+      "name": "萬海            ",
+      "net_lots": 11049
     },
     {
-      "code": "2892",
-      "name": "第一金          ",
-      "net_lots": 20370
-    },
-    {
-      "code": "2887",
-      "name": "台新新光金      ",
-      "net_lots": 20218
+      "code": "2603",
+      "name": "長榮            ",
+      "net_lots": 9807
     }
   ],
   "top10_error": null,
@@ -123,81 +123,81 @@
     {
       "code": "00406A",
       "name": "主動中信台灣收益",
-      "net_lots": -130820
+      "net_lots": -123501
     },
     {
-      "code": "00981A",
-      "name": "主動統一台股增長",
-      "net_lots": -49805
+      "code": "009829",
+      "name": "大華韓國KOSPI50 ",
+      "net_lots": -38936
     },
     {
-      "code": "00403A",
-      "name": "主動統一升級50  ",
-      "net_lots": -37496
+      "code": "1303",
+      "name": "南亞            ",
+      "net_lots": -29075
     },
     {
-      "code": "00632R",
-      "name": "元大台灣50反1   ",
-      "net_lots": -33898
+      "code": "00685L",
+      "name": "群益臺灣加權正2 ",
+      "net_lots": -24472
     },
     {
-      "code": "00673R",
-      "name": "期元大S&P原油反1",
-      "net_lots": -30854
+      "code": "3481",
+      "name": "群創            ",
+      "net_lots": -23188
     },
     {
-      "code": "2634",
-      "name": "漢翔            ",
-      "net_lots": -29748
+      "code": "00953B",
+      "name": "群益優選非投等債",
+      "net_lots": -23082
     },
     {
       "code": "00984D",
       "name": "主動聯博全球非投",
-      "net_lots": -21505
+      "net_lots": -22913
     },
     {
-      "code": "00664R",
-      "name": "國泰臺灣加權反1 ",
-      "net_lots": -21083
+      "code": "1301",
+      "name": "台塑            ",
+      "net_lots": -22084
     },
     {
-      "code": "00407A",
-      "name": "主動凱基台灣    ",
-      "net_lots": -19840
+      "code": "009816",
+      "name": "凱基台灣TOP50   ",
+      "net_lots": -21875
     },
     {
-      "code": "00400A",
-      "name": "主動國泰動能高息",
-      "net_lots": -18987
+      "code": "00919",
+      "name": "群益台灣精選高息",
+      "net_lots": -19934
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 15.84,
-    "change": -0.17,
-    "change_pct": -1.06
+    "close": 15.95,
+    "change": 0.82,
+    "change_pct": 5.42
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 26067.17,
-      "change_pct": -1.0
+      "close": 26180.46,
+      "change_pct": 0.43
     },
     {
       "label": "費半指數",
-      "close": 11800.02,
-      "change_pct": 0.53
+      "close": 11740.37,
+      "change_pct": -0.51
     },
     {
       "label": "S&P 500",
-      "close": 7641.16,
-      "change_pct": -0.87
+      "close": 7674.37,
+      "change_pct": 0.43
     },
     {
       "label": "道瓊",
-      "close": 52759.21,
-      "change_pct": -1.32
+      "close": 53277.01,
+      "change_pct": 0.98
     }
   ],
   "us_indices_error": null
