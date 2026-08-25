@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-08-24T08:10:31.145432",
+  "updated_at": "2026-08-25T08:06:48.730977",
   "institutional": [
+    {
+      "date": "20260825",
+      "foreign_amt": 0,
+      "trust_amt": -46.1,
+      "dealer_amt": -7.3
+    },
     {
       "date": "20260824",
       "foreign_amt": 0,
-      "trust_amt": 37.1,
-      "dealer_amt": -200.8
+      "trust_amt": 30.5,
+      "dealer_amt": -200.7
     },
     {
       "date": "20260821",
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": 22.8,
       "dealer_amt": 197.2
-    },
-    {
-      "date": "20260811",
-      "foreign_amt": 0,
-      "trust_amt": 32.2,
-      "dealer_amt": 247.9
     }
   ],
   "institutional_error": null,
@@ -80,7 +80,7 @@
     {
       "code": "2324",
       "name": "仁寶            ",
-      "net_lots": 29472
+      "net_lots": 29922
     },
     {
       "code": "2609",
@@ -88,14 +88,14 @@
       "net_lots": 29205
     },
     {
-      "code": "2303",
-      "name": "聯電            ",
-      "net_lots": 19101
-    },
-    {
       "code": "009821",
       "name": "野村稀土關鍵資源",
       "net_lots": 18422
+    },
+    {
+      "code": "2303",
+      "name": "聯電            ",
+      "net_lots": 16252
     },
     {
       "code": "2426",
@@ -173,31 +173,31 @@
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 15.95,
-    "change": 0.82,
-    "change_pct": 5.42
+    "close": 15.8,
+    "change": -0.05,
+    "change_pct": -0.32
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 26180.46,
-      "change_pct": 0.43
+      "close": 25980.19,
+      "change_pct": -0.76
     },
     {
       "label": "費半指數",
-      "close": 11740.37,
-      "change_pct": -0.51
+      "close": 11423.17,
+      "change_pct": -2.7
     },
     {
       "label": "S&P 500",
-      "close": 7674.37,
-      "change_pct": 0.43
+      "close": 7652.86,
+      "change_pct": -0.28
     },
     {
       "label": "道瓊",
-      "close": 53277.01,
-      "change_pct": 0.98
+      "close": 53417.16,
+      "change_pct": 0.26
     }
   ],
   "us_indices_error": null
