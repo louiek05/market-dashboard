@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-09-22T12:45:24.897409",
+  "updated_at": "2026-09-23T12:54:04.949327",
   "institutional": [
+    {
+      "date": "20260923",
+      "foreign_amt": 0,
+      "trust_amt": -47.6,
+      "dealer_amt": 431.4
+    },
     {
       "date": "20260922",
       "foreign_amt": 0,
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": 33.5,
       "dealer_amt": -521.0
-    },
-    {
-      "date": "20260909",
-      "foreign_amt": 0,
-      "trust_amt": 20.8,
-      "dealer_amt": 190.4
     }
   ],
   "institutional_error": null,
@@ -70,112 +70,112 @@
     {
       "code": "00403A",
       "name": "主動統一升級50  ",
-      "net_lots": 395764
-    },
-    {
-      "code": "2409",
-      "name": "友達            ",
-      "net_lots": 250485
-    },
-    {
-      "code": "00409A",
-      "name": "主動復華全球50  ",
-      "net_lots": 153868
+      "net_lots": 261646
     },
     {
       "code": "00981A",
       "name": "主動統一台股增長",
-      "net_lots": 147972
+      "net_lots": 138263
     },
     {
       "code": "00405A",
       "name": "主動富邦台灣龍耀",
-      "net_lots": 126300
+      "net_lots": 86107
     },
     {
       "code": "00407A",
       "name": "主動凱基台灣    ",
-      "net_lots": 121257
+      "net_lots": 53504
+    },
+    {
+      "code": "00409A",
+      "name": "主動復華全球50  ",
+      "net_lots": 42208
     },
     {
       "code": "00631L",
       "name": "元大台灣50正2   ",
-      "net_lots": 72991
+      "net_lots": 33767
     },
     {
-      "code": "00685L",
-      "name": "群益臺灣加權正2 ",
-      "net_lots": 60336
+      "code": "00402A",
+      "name": "主動安聯美國科技",
+      "net_lots": 31541
     },
     {
-      "code": "2303",
-      "name": "聯電            ",
-      "net_lots": 60104
+      "code": "1101",
+      "name": "台泥            ",
+      "net_lots": 30782
     },
     {
       "code": "00991A",
       "name": "主動復華未來50  ",
-      "net_lots": 54706
+      "net_lots": 29753
+    },
+    {
+      "code": "2408",
+      "name": "南亞科          ",
+      "net_lots": 29608
     }
   ],
   "top10_error": null,
   "top10_sell": [
     {
-      "code": "00712",
-      "name": "復華富時不動產  ",
-      "net_lots": -47661
+      "code": "2409",
+      "name": "友達            ",
+      "net_lots": -162138
     },
     {
-      "code": "3231",
-      "name": "緯創            ",
-      "net_lots": -36167
-    },
-    {
-      "code": "00918",
-      "name": "大華優利高填息30",
-      "net_lots": -35839
-    },
-    {
-      "code": "00919",
-      "name": "群益台灣精選高息",
-      "net_lots": -32464
-    },
-    {
-      "code": "2883",
-      "name": "凱基金          ",
-      "net_lots": -28638
-    },
-    {
-      "code": "1314",
-      "name": "中石化          ",
-      "net_lots": -28054
-    },
-    {
-      "code": "00961",
-      "name": "FT臺灣永續高息  ",
-      "net_lots": -27047
+      "code": "3481",
+      "name": "群創            ",
+      "net_lots": -57816
     },
     {
       "code": "009816",
       "name": "凱基台灣TOP50   ",
-      "net_lots": -24954
+      "net_lots": -40856
     },
     {
-      "code": "1303",
-      "name": "南亞            ",
-      "net_lots": -24579
+      "code": "00919",
+      "name": "群益台灣精選高息",
+      "net_lots": -32988
     },
     {
-      "code": "2408",
-      "name": "南亞科          ",
-      "net_lots": -23703
+      "code": "00712",
+      "name": "復華富時不動產  ",
+      "net_lots": -24929
+    },
+    {
+      "code": "00918",
+      "name": "大華優利高填息30",
+      "net_lots": -19069
+    },
+    {
+      "code": "00406A",
+      "name": "主動中信台灣收益",
+      "net_lots": -19060
+    },
+    {
+      "code": "00961",
+      "name": "FT臺灣永續高息  ",
+      "net_lots": -18672
+    },
+    {
+      "code": "6116",
+      "name": "彩晶            ",
+      "net_lots": -17302
+    },
+    {
+      "code": "0056",
+      "name": "元大高股息      ",
+      "net_lots": -16605
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 14.65,
-    "change": -0.22,
-    "change_pct": -1.48
+    "close": 14.29,
+    "change": -0.58,
+    "change_pct": -3.9
   },
   "vix_error": null,
   "us_indices": [
