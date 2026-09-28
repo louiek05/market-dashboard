@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T12:52:00.310306",
+  "updated_at": "2026-09-28T15:45:57.810447",
   "institutional": [
     {
       "date": "20260924",
@@ -173,31 +173,31 @@
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 15.17,
-    "change": -0.5,
-    "change_pct": -3.19
+    "close": 16.36,
+    "change": 1.49,
+    "change_pct": 10.02
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 26939.37,
-      "change_pct": 0.01
+      "close": 26789.82,
+      "change_pct": -1.03
     },
     {
       "label": "費半指數",
-      "close": 12492.54,
-      "change_pct": -0.33
+      "close": 12338.59,
+      "change_pct": -2.61
     },
     {
       "label": "S&P 500",
-      "close": 7704.13,
-      "change_pct": -0.02
+      "close": 7678.18,
+      "change_pct": -0.84
     },
     {
       "label": "道瓊",
-      "close": 51349.98,
-      "change_pct": -0.31
+      "close": 51453.49,
+      "change_pct": -0.72
     }
   ],
   "us_indices_error": null
