@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-09-29T14:13:59.604375",
+  "updated_at": "2026-09-30T14:04:06.661565",
   "institutional": [
+    {
+      "date": "20260930",
+      "foreign_amt": 0,
+      "trust_amt": 82.9,
+      "dealer_amt": 321.0
+    },
     {
       "date": "20260929",
       "foreign_amt": 0,
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": -19.9,
       "dealer_amt": -769.1
-    },
-    {
-      "date": "20260914",
-      "foreign_amt": 0,
-      "trust_amt": 37.0,
-      "dealer_amt": -520.6
     }
   ],
   "institutional_error": null,
@@ -68,54 +68,54 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "1303",
-      "name": "南亞            ",
-      "net_lots": 33822
+      "code": "3481",
+      "name": "群創            ",
+      "net_lots": 106280
     },
     {
       "code": "00403A",
       "name": "主動統一升級50  ",
-      "net_lots": 33417
+      "net_lots": 73834
     },
     {
       "code": "2409",
       "name": "友達            ",
-      "net_lots": 23042
-    },
-    {
-      "code": "6505",
-      "name": "台塑化          ",
-      "net_lots": 16560
+      "net_lots": 70921
     },
     {
       "code": "6770",
       "name": "力積電          ",
-      "net_lots": 15575
+      "net_lots": 61797
     },
     {
-      "code": "4958",
-      "name": "臻鼎-KY         ",
-      "net_lots": 13281
-    },
-    {
-      "code": "00632R",
-      "name": "元大台灣50反1   ",
-      "net_lots": 12825
+      "code": "1101",
+      "name": "台泥            ",
+      "net_lots": 58607
     },
     {
       "code": "2002",
       "name": "中鋼            ",
-      "net_lots": 9879
+      "net_lots": 54351
     },
     {
-      "code": "3231",
-      "name": "緯創            ",
-      "net_lots": 8550
+      "code": "1314",
+      "name": "中石化          ",
+      "net_lots": 42444
     },
     {
-      "code": "3481",
-      "name": "群創            ",
-      "net_lots": 7156
+      "code": "2344",
+      "name": "華邦電          ",
+      "net_lots": 39024
+    },
+    {
+      "code": "00631L",
+      "name": "元大台灣50正2   ",
+      "net_lots": 30792
+    },
+    {
+      "code": "1301",
+      "name": "台塑            ",
+      "net_lots": 30582
     }
   ],
   "top10_error": null,
@@ -123,81 +123,81 @@
     {
       "code": "00406A",
       "name": "主動中信台灣收益",
-      "net_lots": -558025
+      "net_lots": -247571
     },
     {
       "code": "009816",
       "name": "凱基台灣TOP50   ",
-      "net_lots": -88865
-    },
-    {
-      "code": "00685L",
-      "name": "群益臺灣加權正2 ",
-      "net_lots": -85170
-    },
-    {
-      "code": "0050",
-      "name": "元大台灣50      ",
-      "net_lots": -66216
+      "net_lots": -34836
     },
     {
       "code": "00712",
       "name": "復華富時不動產  ",
-      "net_lots": -63244
+      "net_lots": -29825
     },
     {
-      "code": "00631L",
-      "name": "元大台灣50正2   ",
-      "net_lots": -35481
-    },
-    {
-      "code": "00981A",
-      "name": "主動統一台股增長",
-      "net_lots": -30356
+      "code": "00919",
+      "name": "群益台灣精選高息",
+      "net_lots": -24360
     },
     {
       "code": "00953B",
       "name": "群益優選非投等債",
-      "net_lots": -29977
-    },
-    {
-      "code": "0056",
-      "name": "元大高股息      ",
-      "net_lots": -27421
+      "net_lots": -21981
     },
     {
       "code": "00918",
       "name": "大華優利高填息30",
-      "net_lots": -26000
+      "net_lots": -15787
+    },
+    {
+      "code": "00984D",
+      "name": "主動聯博全球非投",
+      "net_lots": -14444
+    },
+    {
+      "code": "0056",
+      "name": "元大高股息      ",
+      "net_lots": -12020
+    },
+    {
+      "code": "00632R",
+      "name": "元大台灣50反1   ",
+      "net_lots": -11627
+    },
+    {
+      "code": "00878",
+      "name": "國泰永續高股息  ",
+      "net_lots": -9134
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 15.89,
-    "change": -0.18,
-    "change_pct": -1.12
+    "close": 15.77,
+    "change": -0.27,
+    "change_pct": -1.68
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 26819.83,
-      "change_pct": -0.0
+      "close": 27070.01,
+      "change_pct": 1.02
     },
     {
       "label": "費半指數",
-      "close": 12687.97,
-      "change_pct": 1.79
+      "close": 12657.54,
+      "change_pct": 0.22
     },
     {
       "label": "S&P 500",
-      "close": 7681.35,
-      "change_pct": -0.03
+      "close": 7714.7,
+      "change_pct": 0.57
     },
     {
       "label": "道瓊",
-      "close": 51384.69,
-      "change_pct": -0.19
+      "close": 51384.76,
+      "change_pct": 0.07
     }
   ],
   "us_indices_error": null
