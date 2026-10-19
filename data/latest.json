@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-16T12:37:47.484452",
+  "updated_at": "2026-10-19T14:51:47.371164",
   "institutional": [
+    {
+      "date": "20261019",
+      "foreign_amt": 0,
+      "trust_amt": 241.4,
+      "dealer_amt": -1130.1
+    },
     {
       "date": "20261016",
       "foreign_amt": 0,
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": -52.9,
       "dealer_amt": 828.5
-    },
-    {
-      "date": "20261002",
-      "foreign_amt": 0,
-      "trust_amt": 57.7,
-      "dealer_amt": 46.5
     }
   ],
   "institutional_error": null,
@@ -68,54 +68,54 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "00919",
-      "name": "群益台灣精選高息",
-      "net_lots": 61159
-    },
-    {
-      "code": "2002",
-      "name": "中鋼            ",
-      "net_lots": 44263
-    },
-    {
-      "code": "2610",
-      "name": "華航            ",
-      "net_lots": 28676
-    },
-    {
-      "code": "00953B",
-      "name": "群益優選非投等債",
-      "net_lots": 26775
-    },
-    {
-      "code": "2317",
-      "name": "鴻海            ",
-      "net_lots": 23160
-    },
-    {
-      "code": "5880",
-      "name": "合庫金          ",
-      "net_lots": 22810
-    },
-    {
-      "code": "00961",
-      "name": "FT臺灣永續高息  ",
-      "net_lots": 22126
+      "code": "00632R",
+      "name": "元大台灣50反1   ",
+      "net_lots": 43652
     },
     {
       "code": "2409",
       "name": "友達            ",
-      "net_lots": 20447
+      "net_lots": 15392
     },
     {
-      "code": "2883",
-      "name": "凱基金          ",
-      "net_lots": 18503
+      "code": "00680L",
+      "name": "元大美債20正2   ",
+      "net_lots": 13258
     },
     {
-      "code": "1802",
-      "name": "台玻            ",
-      "net_lots": 18155
+      "code": "00664R",
+      "name": "國泰臺灣加權反1 ",
+      "net_lots": 9647
+    },
+    {
+      "code": "2002",
+      "name": "中鋼            ",
+      "net_lots": 9580
+    },
+    {
+      "code": "2884",
+      "name": "玉山金          ",
+      "net_lots": 8652
+    },
+    {
+      "code": "2886",
+      "name": "兆豐金          ",
+      "net_lots": 7412
+    },
+    {
+      "code": "9105",
+      "name": "泰金寶-DR       ",
+      "net_lots": 7160
+    },
+    {
+      "code": "00686R",
+      "name": "群益臺灣加權反1 ",
+      "net_lots": 7051
+    },
+    {
+      "code": "5880",
+      "name": "合庫金          ",
+      "net_lots": 6979
     }
   ],
   "top10_error": null,
@@ -123,81 +123,81 @@
     {
       "code": "00406A",
       "name": "主動中信台灣收益",
-      "net_lots": -564252
-    },
-    {
-      "code": "00985A",
-      "name": "主動野村台灣50  ",
-      "net_lots": -141911
-    },
-    {
-      "code": "009816",
-      "name": "凱基台灣TOP50   ",
-      "net_lots": -77919
-    },
-    {
-      "code": "00927",
-      "name": "群益半導體收益  ",
-      "net_lots": -72973
-    },
-    {
-      "code": "00631L",
-      "name": "元大台灣50正2   ",
-      "net_lots": -72399
-    },
-    {
-      "code": "0050",
-      "name": "元大台灣50      ",
-      "net_lots": -57179
-    },
-    {
-      "code": "00412A",
-      "name": "主動安聯亞半導體",
-      "net_lots": -43998
-    },
-    {
-      "code": "00981A",
-      "name": "主動統一台股增長",
-      "net_lots": -41823
+      "net_lots": -440650
     },
     {
       "code": "00685L",
       "name": "群益臺灣加權正2 ",
-      "net_lots": -40862
+      "net_lots": -231093
     },
     {
-      "code": "00673R",
-      "name": "期元大S&P原油反1",
-      "net_lots": -35464
+      "code": "00631L",
+      "name": "元大台灣50正2   ",
+      "net_lots": -167906
+    },
+    {
+      "code": "009816",
+      "name": "凱基台灣TOP50   ",
+      "net_lots": -110414
+    },
+    {
+      "code": "0056",
+      "name": "元大高股息      ",
+      "net_lots": -98061
+    },
+    {
+      "code": "0050",
+      "name": "元大台灣50      ",
+      "net_lots": -93171
+    },
+    {
+      "code": "00981A",
+      "name": "主動統一台股增長",
+      "net_lots": -84552
+    },
+    {
+      "code": "00929",
+      "name": "復華台灣科技優息",
+      "net_lots": -59110
+    },
+    {
+      "code": "00927",
+      "name": "群益半導體收益  ",
+      "net_lots": -42201
+    },
+    {
+      "code": "6770",
+      "name": "力積電          ",
+      "net_lots": -35323
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 16.01,
-    "change": -0.45,
-    "change_pct": -2.73
+    "close": 17.9,
+    "change": -2.09,
+    "change_pct": -10.46
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 26713.03,
-      "change_pct": 0.08
+      "close": 26500.58,
+      "change_pct": 1.38
     },
     {
       "label": "費半指數",
-      "close": 11581.21,
-      "change_pct": -0.88
+      "close": 11420.03,
+      "change_pct": 2.54
     },
     {
       "label": "S&P 500",
-      "close": 7744.06,
-      "change_pct": 0.33
+      "close": 7703.35,
+      "change_pct": 0.57
     },
     {
       "label": "道瓊",
-      "close": 52177.69,
-      "change_pct": 1.08
+      "close": 51925.97,
+      "change_pct": -0.15
     }
   ],
   "us_indices_error": null
