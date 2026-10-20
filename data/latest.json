@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-19T14:51:47.371164",
+  "updated_at": "2026-10-20T12:51:07.695166",
   "institutional": [
+    {
+      "date": "20261020",
+      "foreign_amt": 0,
+      "trust_amt": 187.6,
+      "dealer_amt": -1151.2
+    },
     {
       "date": "20261019",
       "foreign_amt": 0,
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": -142.6,
       "dealer_amt": -49.4
-    },
-    {
-      "date": "20261005",
-      "foreign_amt": 0,
-      "trust_amt": -52.9,
-      "dealer_amt": 828.5
     }
   ],
   "institutional_error": null,
@@ -68,54 +68,54 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "00632R",
-      "name": "元大台灣50反1   ",
-      "net_lots": 43652
-    },
-    {
-      "code": "2409",
-      "name": "友達            ",
-      "net_lots": 15392
-    },
-    {
-      "code": "00680L",
-      "name": "元大美債20正2   ",
-      "net_lots": 13258
-    },
-    {
-      "code": "00664R",
-      "name": "國泰臺灣加權反1 ",
-      "net_lots": 9647
+      "code": "3231",
+      "name": "緯創            ",
+      "net_lots": 42703
     },
     {
       "code": "2002",
       "name": "中鋼            ",
-      "net_lots": 9580
+      "net_lots": 24567
     },
     {
-      "code": "2884",
-      "name": "玉山金          ",
-      "net_lots": 8652
+      "code": "1802",
+      "name": "台玻            ",
+      "net_lots": 18618
     },
     {
-      "code": "2886",
-      "name": "兆豐金          ",
-      "net_lots": 7412
+      "code": "2324",
+      "name": "仁寶            ",
+      "net_lots": 15952
     },
     {
-      "code": "9105",
-      "name": "泰金寶-DR       ",
-      "net_lots": 7160
+      "code": "00953B",
+      "name": "群益優選非投等債",
+      "net_lots": 13488
     },
     {
-      "code": "00686R",
-      "name": "群益臺灣加權反1 ",
-      "net_lots": 7051
+      "code": "00632R",
+      "name": "元大台灣50反1   ",
+      "net_lots": 12238
     },
     {
-      "code": "5880",
-      "name": "合庫金          ",
-      "net_lots": 6979
+      "code": "2353",
+      "name": "宏碁            ",
+      "net_lots": 12119
+    },
+    {
+      "code": "00664R",
+      "name": "國泰臺灣加權反1 ",
+      "net_lots": 11001
+    },
+    {
+      "code": "00961",
+      "name": "FT臺灣永續高息  ",
+      "net_lots": 8551
+    },
+    {
+      "code": "2356",
+      "name": "英業達          ",
+      "net_lots": 8526
     }
   ],
   "top10_error": null,
@@ -123,81 +123,81 @@
     {
       "code": "00406A",
       "name": "主動中信台灣收益",
-      "net_lots": -440650
+      "net_lots": -520623
     },
     {
       "code": "00685L",
       "name": "群益臺灣加權正2 ",
-      "net_lots": -231093
-    },
-    {
-      "code": "00631L",
-      "name": "元大台灣50正2   ",
-      "net_lots": -167906
+      "net_lots": -232925
     },
     {
       "code": "009816",
       "name": "凱基台灣TOP50   ",
-      "net_lots": -110414
+      "net_lots": -132957
+    },
+    {
+      "code": "00631L",
+      "name": "元大台灣50正2   ",
+      "net_lots": -131116
     },
     {
       "code": "0056",
       "name": "元大高股息      ",
-      "net_lots": -98061
+      "net_lots": -87877
     },
     {
       "code": "0050",
       "name": "元大台灣50      ",
-      "net_lots": -93171
+      "net_lots": -82415
+    },
+    {
+      "code": "00415A",
+      "name": "主動群益核心50  ",
+      "net_lots": -72860
     },
     {
       "code": "00981A",
       "name": "主動統一台股增長",
-      "net_lots": -84552
+      "net_lots": -71409
     },
     {
       "code": "00929",
       "name": "復華台灣科技優息",
-      "net_lots": -59110
+      "net_lots": -50351
     },
     {
-      "code": "00927",
-      "name": "群益半導體收益  ",
-      "net_lots": -42201
-    },
-    {
-      "code": "6770",
-      "name": "力積電          ",
-      "net_lots": -35323
+      "code": "00919",
+      "name": "群益台灣精選高息",
+      "net_lots": -47348
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 17.9,
-    "change": -2.09,
-    "change_pct": -10.46
+    "close": 19.07,
+    "change": 0.63,
+    "change_pct": 3.42
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 26500.58,
-      "change_pct": 1.38
+      "close": 26430.89,
+      "change_pct": 1.11
     },
     {
       "label": "費半指數",
-      "close": 11420.03,
-      "change_pct": 2.54
+      "close": 11316.34,
+      "change_pct": 1.61
     },
     {
       "label": "S&P 500",
-      "close": 7703.35,
-      "change_pct": 0.57
+      "close": 7690.73,
+      "change_pct": 0.41
     },
     {
       "label": "道瓊",
-      "close": 51925.97,
-      "change_pct": -0.15
+      "close": 51966.03,
+      "change_pct": -0.07
     }
   ],
   "us_indices_error": null
