@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-11-26T17:50:15.342151",
+  "updated_at": "2026-11-27T17:34:56.647506",
   "institutional": [
+    {
+      "date": "20261127",
+      "foreign_amt": 0,
+      "trust_amt": 85.2,
+      "dealer_amt": -298.2
+    },
     {
       "date": "20261126",
       "foreign_amt": 0,
@@ -54,12 +60,6 @@
       "foreign_amt": 0,
       "trust_amt": -183.0,
       "dealer_amt": -960.9
-    },
-    {
-      "date": "20261113",
-      "foreign_amt": 0,
-      "trust_amt": 95.4,
-      "dealer_amt": 357.3
     }
   ],
   "institutional_error": null,
@@ -68,136 +68,136 @@
   "taifex_error": "HTTP Error 403: Forbidden",
   "top10": [
     {
-      "code": "00991A",
-      "name": "主動復華未來50  ",
-      "net_lots": 334637
-    },
-    {
-      "code": "00981A",
-      "name": "主動統一台股增長",
-      "net_lots": 212874
-    },
-    {
-      "code": "00406A",
-      "name": "主動中信台灣收益",
-      "net_lots": 186450
+      "code": "00631L",
+      "name": "元大台灣50正2   ",
+      "net_lots": 87470
     },
     {
       "code": "00685L",
       "name": "群益臺灣加權正2 ",
-      "net_lots": 71148
+      "net_lots": 55418
+    },
+    {
+      "code": "00981A",
+      "name": "主動統一台股增長",
+      "net_lots": 51202
+    },
+    {
+      "code": "00991A",
+      "name": "主動復華未來50  ",
+      "net_lots": 45773
     },
     {
       "code": "00403A",
       "name": "主動統一升級50  ",
-      "net_lots": 64350
+      "net_lots": 23594
     },
     {
-      "code": "00405A",
-      "name": "主動富邦台灣龍耀",
-      "net_lots": 28186
+      "code": "0052",
+      "name": "富邦科技        ",
+      "net_lots": 17453
     },
     {
-      "code": "3481",
-      "name": "群創            ",
-      "net_lots": 26655
+      "code": "00712",
+      "name": "復華富時不動產  ",
+      "net_lots": 11338
     },
     {
       "code": "0050",
       "name": "元大台灣50      ",
-      "net_lots": 20336
+      "net_lots": 10870
     },
     {
-      "code": "00671R",
-      "name": "富邦NASDAQ反1   ",
-      "net_lots": 20128
+      "code": "2317",
+      "name": "鴻海            ",
+      "net_lots": 8915
     },
     {
-      "code": "6770",
-      "name": "力積電          ",
-      "net_lots": 19771
+      "code": "00680L",
+      "name": "元大美債20正2   ",
+      "net_lots": 7860
     }
   ],
   "top10_error": null,
   "top10_sell": [
     {
-      "code": "1802",
-      "name": "台玻            ",
-      "net_lots": -91525
+      "code": "00406A",
+      "name": "主動中信台灣收益",
+      "net_lots": -272001
     },
     {
       "code": "00632R",
       "name": "元大台灣50反1   ",
-      "net_lots": -58079
-    },
-    {
-      "code": "2890",
-      "name": "永豐金          ",
-      "net_lots": -18800
-    },
-    {
-      "code": "2330",
-      "name": "台積電          ",
-      "net_lots": -15497
-    },
-    {
-      "code": "2886",
-      "name": "兆豐金          ",
-      "net_lots": -14070
-    },
-    {
-      "code": "00953B",
-      "name": "群益優選非投等債",
-      "net_lots": -13110
-    },
-    {
-      "code": "2303",
-      "name": "聯電            ",
-      "net_lots": -10256
+      "net_lots": -107477
     },
     {
       "code": "009816",
       "name": "凱基台灣TOP50   ",
-      "net_lots": -10143
+      "net_lots": -24848
     },
     {
-      "code": "00984D",
-      "name": "主動聯博全球非投",
-      "net_lots": -8977
+      "code": "2409",
+      "name": "友達            ",
+      "net_lots": -15310
+    },
+    {
+      "code": "0056",
+      "name": "元大高股息      ",
+      "net_lots": -12744
+    },
+    {
+      "code": "00992A",
+      "name": "主動群益科技創新",
+      "net_lots": -12577
+    },
+    {
+      "code": "00953B",
+      "name": "群益優選非投等債",
+      "net_lots": -11234
+    },
+    {
+      "code": "2355",
+      "name": "敬鵬            ",
+      "net_lots": -10151
     },
     {
       "code": "00664R",
       "name": "國泰臺灣加權反1 ",
-      "net_lots": -8971
+      "net_lots": -9747
+    },
+    {
+      "code": "00662",
+      "name": "富邦NASDAQ      ",
+      "net_lots": -9398
     }
   ],
   "top10_sell_error": null,
   "vix": {
-    "close": 26.8,
-    "change": -1.49,
-    "change_pct": -5.27
+    "close": 24.73,
+    "change": -2.07,
+    "change_pct": -7.72
   },
   "vix_error": null,
   "us_indices": [
     {
       "label": "那斯達克",
-      "close": 23585.8,
-      "change_pct": -0.62
+      "close": 24035.79,
+      "change_pct": 1.91
     },
     {
       "label": "費半指數",
-      "close": 8774.86,
-      "change_pct": -0.65
+      "close": 9060.0,
+      "change_pct": 3.25
     },
     {
       "label": "S&P 500",
-      "close": 7182.78,
-      "change_pct": -0.25
+      "close": 7286.26,
+      "change_pct": 1.44
     },
     {
       "label": "道瓊",
-      "close": 50182.95,
-      "change_pct": 0.33
+      "close": 50796.18,
+      "change_pct": 1.22
     }
   ],
   "us_indices_error": null
